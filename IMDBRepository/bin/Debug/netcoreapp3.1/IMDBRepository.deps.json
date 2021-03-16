@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "IMDBRepository/1.0.0": {
+        "dependencies": {
+          "IMDBDomain": "1.0.0"
+        },
+        "runtime": {
+          "IMDBRepository.dll": {}
+        }
+      },
+      "IMDBDomain/1.0.0": {
+        "runtime": {
+          "IMDBDomain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "IMDBRepository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IMDBDomain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
