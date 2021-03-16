@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{AA5BB218-B44F-4C20-8AC8-7E5E494887FB}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="IMDBTests/application.feature.cs">
+    <Files>
+      <File FileName="IMDBTests/application.cs" Line="1" Column="1" />
+      <File FileName="IMDBTests/application.feature.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="IMDB" expanded="True">
+            <Node name="IMDBTests" expanded="True">
+              <Node name="application.feature.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="IMDB" expanded="True" selected="True">
+            <Node name="IMDBTests" expanded="True">
+              <Node name="IMDBTests" expanded="True">
+                <Node name="IMDBFeature" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.IMDBApplication PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
