@@ -17,7 +17,11 @@ use [Sqlsession]
 -- INNER JOIN students S on S.classID = C.ID
 -- GROUP BY C.Name
 
+<<<<<<< HEAD
 -- SQL Assignment 1
+=======
+-- SQL Assignment1
+>>>>>>> daf21c2f025c9b9cf5b95da22a35a4f0b92a03c0
 
 CREATE TABLE Classess (ID int primary key IDENTITY(1,1),Name NVARCHAR(100),Section VARCHAR, NUMBER DECIMAL)
 CREATE TABLE Teacherss (ID int primary key IDENTITY(1,1),Name NVARCHAR(100),DOB DATE,Gender NVARCHAR(50))
