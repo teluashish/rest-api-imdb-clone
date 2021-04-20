@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ash/Desktop/IMDBApplication/IMDBDomain/IMDBDomain.csproj": {}
+    "/Users/ash/Documents/IMDBApplication/IMDBDomain/IMDBDomain.csproj": {}
   },
   "projects": {
-    "/Users/ash/Desktop/IMDBApplication/IMDBDomain/IMDBDomain.csproj": {
+    "/Users/ash/Documents/IMDBApplication/IMDBDomain/IMDBDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ash/Desktop/IMDBApplication/IMDBDomain/IMDBDomain.csproj",
+        "projectUniqueName": "/Users/ash/Documents/IMDBApplication/IMDBDomain/IMDBDomain.csproj",
         "projectName": "IMDBDomain",
-        "projectPath": "/Users/ash/Desktop/IMDBApplication/IMDBDomain/IMDBDomain.csproj",
+        "projectPath": "/Users/ash/Documents/IMDBApplication/IMDBDomain/IMDBDomain.csproj",
         "packagesPath": "/Users/ash/.nuget/packages/",
-        "outputPath": "/Users/ash/Desktop/IMDBApplication/IMDBDomain/obj/",
+        "outputPath": "/Users/ash/Documents/IMDBApplication/IMDBDomain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ash/.config/NuGet/NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }

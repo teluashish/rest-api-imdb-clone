@@ -34,3 +34,15 @@
 /Users/ash/Desktop/IMDBApp/IMDBRepository/obj/Debug/netcoreapp3.1/IMDBRepository.csproj.CopyComplete
 /Users/ash/Desktop/IMDBApp/IMDBRepository/obj/Debug/netcoreapp3.1/IMDBRepository.dll
 /Users/ash/Desktop/IMDBApp/IMDBRepository/obj/Debug/netcoreapp3.1/IMDBRepository.pdb
+/Users/ash/Documents/IMDBApplication/IMDBRepository/bin/Debug/netcoreapp3.1/IMDBRepository.deps.json
+/Users/ash/Documents/IMDBApplication/IMDBRepository/bin/Debug/netcoreapp3.1/IMDBRepository.dll
+/Users/ash/Documents/IMDBApplication/IMDBRepository/bin/Debug/netcoreapp3.1/IMDBRepository.pdb
+/Users/ash/Documents/IMDBApplication/IMDBRepository/bin/Debug/netcoreapp3.1/IMDBDomain.dll
+/Users/ash/Documents/IMDBApplication/IMDBRepository/bin/Debug/netcoreapp3.1/IMDBDomain.pdb
+/Users/ash/Documents/IMDBApplication/IMDBRepository/obj/Debug/netcoreapp3.1/IMDBRepository.csprojAssemblyReference.cache
+/Users/ash/Documents/IMDBApplication/IMDBRepository/obj/Debug/netcoreapp3.1/IMDBRepository.AssemblyInfoInputs.cache
+/Users/ash/Documents/IMDBApplication/IMDBRepository/obj/Debug/netcoreapp3.1/IMDBRepository.AssemblyInfo.cs
+/Users/ash/Documents/IMDBApplication/IMDBRepository/obj/Debug/netcoreapp3.1/IMDBRepository.csproj.CoreCompileInputs.cache
+/Users/ash/Documents/IMDBApplication/IMDBRepository/obj/Debug/netcoreapp3.1/IMDBRepository.csproj.CopyComplete
+/Users/ash/Documents/IMDBApplication/IMDBRepository/obj/Debug/netcoreapp3.1/IMDBRepository.dll
+/Users/ash/Documents/IMDBApplication/IMDBRepository/obj/Debug/netcoreapp3.1/IMDBRepository.pdb

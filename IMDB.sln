@@ -3,15 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.808.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMDBDomain", "IMDBDomain\IMDBDomain.csproj", "{AF8B0D68-5179-4824-9EB4-4D2D791C0648}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMDBAPI", "IMDBAPI\IMDBAPI.csproj", "{A06D0283-4DE4-48C0-98EF-4B2C635D8627}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMDBService", "IMDBService\IMDBService.csproj", "{DB3D5D86-57E7-4731-98B4-E0F42E2789A2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{27CD3CF2-219C-4A2E-B4D1-C0E851956684}"
+	ProjectSection(SolutionItems) = preProject
+		ConnectionDemo.cs = ConnectionDemo.cs
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMDBApplication", "IMDBApplication\IMDBApplication.csproj", "{AA5BB218-B44F-4C20-8AC8-7E5E494887FB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMDBRepository", "IMDBRepository\IMDBRepository.csproj", "{C924FE7C-79BC-439E-B08E-4681D8F6D01C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMDBTests", "IMDBTests\IMDBTests.csproj", "{0CF8E239-7B31-466E-9803-E83CD414D940}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMDB.Tests", "IMDB.Tests\IMDB.Tests.csproj", "{BA1BEE93-617F-40BA-BD2F-6EBCED99C3DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,26 +18,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AF8B0D68-5179-4824-9EB4-4D2D791C0648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF8B0D68-5179-4824-9EB4-4D2D791C0648}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF8B0D68-5179-4824-9EB4-4D2D791C0648}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF8B0D68-5179-4824-9EB4-4D2D791C0648}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DB3D5D86-57E7-4731-98B4-E0F42E2789A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB3D5D86-57E7-4731-98B4-E0F42E2789A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB3D5D86-57E7-4731-98B4-E0F42E2789A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB3D5D86-57E7-4731-98B4-E0F42E2789A2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AA5BB218-B44F-4C20-8AC8-7E5E494887FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA5BB218-B44F-4C20-8AC8-7E5E494887FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA5BB218-B44F-4C20-8AC8-7E5E494887FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA5BB218-B44F-4C20-8AC8-7E5E494887FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C924FE7C-79BC-439E-B08E-4681D8F6D01C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C924FE7C-79BC-439E-B08E-4681D8F6D01C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C924FE7C-79BC-439E-B08E-4681D8F6D01C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C924FE7C-79BC-439E-B08E-4681D8F6D01C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0CF8E239-7B31-466E-9803-E83CD414D940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0CF8E239-7B31-466E-9803-E83CD414D940}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0CF8E239-7B31-466E-9803-E83CD414D940}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0CF8E239-7B31-466E-9803-E83CD414D940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A06D0283-4DE4-48C0-98EF-4B2C635D8627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A06D0283-4DE4-48C0-98EF-4B2C635D8627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A06D0283-4DE4-48C0-98EF-4B2C635D8627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A06D0283-4DE4-48C0-98EF-4B2C635D8627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA1BEE93-617F-40BA-BD2F-6EBCED99C3DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1BEE93-617F-40BA-BD2F-6EBCED99C3DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA1BEE93-617F-40BA-BD2F-6EBCED99C3DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1BEE93-617F-40BA-BD2F-6EBCED99C3DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

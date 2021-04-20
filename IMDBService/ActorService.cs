@@ -5,43 +5,43 @@ using System.Collections.Generic;
 
 namespace IMDBService
 {
-    public class ActorService
+    public class producerService
     {
-        private ActorRepository _actorRepo = new ActorRepository();
+        private producerRepository _producerRepo = new producerRepository();
 
-        public Actor GetActor(int index)
+        public producer Getproducer(int index)
         {
-            return _actorRepo.GetActor(index - 1 );
+            return _producerRepo.Getproducer(index - 1 );
         }
 
-        public void AddActor(string name, string dob)
+        public void Addproducer(string name, string dob)
         {
             DateTime date;
 
             if (ValidationService.IsValidName(name) && ValidationService.IsValidDateOfBirth(dob, out date))
             {
-                Actor actor = new Actor
+                producer producer = new producer
                 {
-                    ID = _actorRepo.GetCount() + 1,
+                    ID = _producerRepo.GetCount() + 1,
                     Name = name,
                     DOB = DateTime.Parse(dob)
                 };
 
-                _actorRepo.AddActor(actor);
+                _producerRepo.Addproducer(producer);
             }
         }
-        public void ShowAllActors()
+        public void ShowAllproducers()
         {
             int i = 1;
-            foreach (var actor in _actorRepo.GetActors())
+            foreach (var producer in _producerRepo.Getproducers())
             {
-                Console.WriteLine(i + ": " + actor.Name);
+                Console.WriteLine(i + ": " + producer.Name);
                 i++;
             }
         }
-        public List<Actor> GetAllActors()
+        public List<producer> GetAllproducers()
         {
-            return _actorRepo.GetAllActors();
+            return _producerRepo.GetAllproducers();
         }
 
     }

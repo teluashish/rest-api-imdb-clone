@@ -36,7 +36,7 @@ namespace IMDBTests
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "IMDB", "\tDisplay of movies and associated Name, Year of Release, Plot, Producer and a lis" +
-                    "t of Actors.", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "t of producers.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -135,7 +135,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Leon",
                             "11/18/1966"});
 #line 11
- testRunner.And("My Actor List Should Look Like This", ((string)(null)), table2, "And ");
+ testRunner.And("My producer List Should Look Like This", ((string)(null)), table2, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "id",
@@ -153,14 +153,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Adding an actor to the actor list")]
-        [NUnit.Framework.CategoryAttribute("addActor")]
-        public virtual void AddingAnActorToTheActorList()
+        [NUnit.Framework.DescriptionAttribute("Adding an producer to the producer list")]
+        [NUnit.Framework.CategoryAttribute("addproducer")]
+        public virtual void AddingAnproducerToTheproducerList()
         {
             string[] tagsOfScenario = new string[] {
-                    "addActor"};
+                    "addproducer"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding an actor to the actor list", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding an producer to the producer list", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 22
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -182,13 +182,13 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 23
- testRunner.Given("I have an actor with name \"Brad Pitt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have an producer with name \"Brad Pitt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 24
- testRunner.And("Date of Birth of Actor is \"12/18/1963\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Date of Birth of producer is \"12/18/1963\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 25
- testRunner.When("I add the actor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I add the producer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "id",
@@ -199,7 +199,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Brad Pitt",
                             "12/18/1963"});
 #line 26
- testRunner.Then("my actorlist should look like this", ((string)(null)), table4, "Then ");
+ testRunner.Then("my producerlist should look like this", ((string)(null)), table4, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -300,7 +300,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("ID of the producer is 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 49
- testRunner.And("Id of the actor is \"1 2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Id of the producer is \"1 2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 50
  testRunner.When("I add the movie to movielist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -331,7 +331,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Leon",
                             "11/18/1966"});
 #line 54
- testRunner.And("My Actorr List Should Look Like This", ((string)(null)), table7, "And ");
+ testRunner.And("My producerr List Should Look Like This", ((string)(null)), table7, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

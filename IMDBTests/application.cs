@@ -18,11 +18,11 @@ namespace IMDBTests
             _scenarioContext = scenarioContext;
         }
 
-        private string mname, aname, pname, adob, pdob, plot,actors;
+        private string mname, aname, pname, adob, pdob, plot,producers;
         private int year, aid, pid;
         private ApplicationService _applicationService = new ApplicationService();
         private ProducerRepository _producerRepo = new ProducerRepository();
-        private ActorRepository _actorRepo = new ActorRepository();
+        private producerRepository _producerRepo = new producerRepository();
         private MovieRepository _movieRepo = new MovieRepository();
 
         [Given(@"I have a movie with name ""(.*)""")]
@@ -49,19 +49,19 @@ namespace IMDBTests
             pid = p0;
         }
 
-        [Given(@"Id of the actor is ""(.*)""")]
-        public void GivenIdOfTheActorIs(string p0)
+        [Given(@"Id of the producer is ""(.*)""")]
+        public void GivenIdOfTheproducerIs(string p0)
         {
-            actors = p0;
+            producers = p0;
         }
 
         [When(@"I add the movie to movielist")]
         public void WhenIAddTheMovieToMovielist()
         {
-            _applicationService.AddActor("Brad Pitt", "12/18/1963");
-            _applicationService.AddActor("Leon", "11/18/1966");
+            _applicationService.Addproducer("Brad Pitt", "12/18/1963");
+            _applicationService.Addproducer("Leon", "11/18/1966");
             _applicationService.AddProducer("James Mangold", "12/16/1963");
-            _applicationService.AddMovie(mname,plot,year,pid,actors);
+            _applicationService.AddMovie(mname,plot,year,pid,producers);
         }
 
 
@@ -71,40 +71,40 @@ namespace IMDBTests
             var movie = _applicationService.GetAllMovies();
             table.CompareToSet(movie.Select(movie=>new Movie { ID=movie.ID , Name = movie.Name, Plot = movie.Plot, Year = movie.Year, Producer = movie.Producer}));
         }
-        [Then(@"My Actorr List Should Look Like This")]
-        public void ThenMyActorrListShouldLookLikeThis(Table table)
+        [Then(@"My producerr List Should Look Like This")]
+        public void ThenMyproducerrListShouldLookLikeThis(Table table)
         {
-            var actors = _applicationService.GetAllActors();
-            table.CompareToSet(actors.Select(actors => new Actor { ID = actors.ID, Name = actors.Name, DOB = actors.DOB }));
+            var producers = _applicationService.GetAllproducers();
+            table.CompareToSet(producers.Select(producers => new producer { ID = producers.ID, Name = producers.Name, DOB = producers.DOB }));
         }
 
 
 
 
-        //addActor
-        [Given(@"I have an actor with name ""(.*)""")]
-        public void GivenIHaveAnActorWithName(string p0)
+        //addproducer
+        [Given(@"I have an producer with name ""(.*)""")]
+        public void GivenIHaveAnproducerWithName(string p0)
         {
             aname = p0;
         }
 
-        [Given(@"Date of Birth of Actor is ""(.*)""")]
-        public void GivenDateOfBirthOfActorIs(string p0)
+        [Given(@"Date of Birth of producer is ""(.*)""")]
+        public void GivenDateOfBirthOfproducerIs(string p0)
         {
             adob = p0;
         }
 
-        [When(@"I add the actor")]
-        public void WhenIAddTheActor()
+        [When(@"I add the producer")]
+        public void WhenIAddTheproducer()
         {
-            _applicationService.AddActor(aname,adob);
+            _applicationService.Addproducer(aname,adob);
         }
 
-        [Then(@"my actorlist should look like this")]
-        public void ThenMyActorlistShouldLookLikeThis(Table table)
+        [Then(@"my producerlist should look like this")]
+        public void ThenMyproducerlistShouldLookLikeThis(Table table)
         {
-            var actors = _applicationService.GetAllActors();
-            table.CompareToSet(actors.Select(actors => new Actor { ID = actors.ID, Name = actors.Name, DOB = actors.DOB }));
+            var producers = _applicationService.GetAllproducers();
+            table.CompareToSet(producers.Select(producers => new producer { ID = producers.ID, Name = producers.Name, DOB = producers.DOB }));
         }
 
         //addProducer
@@ -130,7 +130,7 @@ namespace IMDBTests
         public void ThenMyProducerlistShouldLookLikeThis(Table table)
         {
             var pro = _applicationService.GetAllProducers();
-            table.CompareToSet(pro.Select(pro => new Actor { ID = pro.ID, Name = pro.Name, DOB = pro.DOB }));
+            table.CompareToSet(pro.Select(pro => new producer { ID = pro.ID, Name = pro.Name, DOB = pro.DOB }));
         }
 
 
@@ -138,8 +138,8 @@ namespace IMDBTests
         [Given(@"I have a list of movies")]
         public void GivenIHaveAListOfMovies()
         {
-            _applicationService.AddActor("Brad Pitt", "12/18/1963");
-            _applicationService.AddActor("Leon", "11/18/1966");
+            _applicationService.Addproducer("Brad Pitt", "12/18/1963");
+            _applicationService.Addproducer("Leon", "11/18/1966");
             _applicationService.AddProducer("James Mangold", "12/16/1963");
         }
 
@@ -156,11 +156,11 @@ namespace IMDBTests
             table.CompareToSet(movie.Select(movie => new Movie { ID = movie.ID, Name = movie.Name, Plot = movie.Plot, Year = movie.Year, Producer = movie.Producer }));
         }
 
-        [Then(@"My Actor List Should Look Like This")]
-        public void ThenMyActorListShouldLookLikeThis(Table table)
+        [Then(@"My producer List Should Look Like This")]
+        public void ThenMyproducerListShouldLookLikeThis(Table table)
         {
-            var actors = _applicationService.GetAllActors();
-            table.CompareToSet(actors.Select(actors => new Actor { ID = actors.ID, Name = actors.Name, DOB = actors.DOB }));
+            var producers = _applicationService.GetAllproducers();
+            table.CompareToSet(producers.Select(producers => new producer { ID = producers.ID, Name = producers.Name, DOB = producers.DOB }));
         }
 
         [Then(@"Producer Looks Like This")]

@@ -1,67 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
-      "IMDBDomain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/IMDBDomain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IMDBDomain.dll": {}
-        }
-      },
-      "IMDBRepository/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "IMDBDomain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/IMDBRepository.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IMDBRepository.dll": {}
-        }
-      },
-      "IMDBService/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "IMDBDomain": "1.0.0",
-          "IMDBRepository": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/IMDBService.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IMDBService.dll": {}
-        }
-      }
-    }
+    ".NETCoreApp,Version=v3.1": {}
   },
-  "libraries": {
-    "IMDBDomain/1.0.0": {
-      "type": "project",
-      "path": "../IMDBDomain/IMDBDomain.csproj",
-      "msbuildProject": "../IMDBDomain/IMDBDomain.csproj"
-    },
-    "IMDBRepository/1.0.0": {
-      "type": "project",
-      "path": "../IMDBRepository/IMDBRepository.csproj",
-      "msbuildProject": "../IMDBRepository/IMDBRepository.csproj"
-    },
-    "IMDBService/1.0.0": {
-      "type": "project",
-      "path": "../IMDBService/IMDBService.csproj",
-      "msbuildProject": "../IMDBService/IMDBService.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
-      "IMDBService >= 1.0.0"
-    ]
+    ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
     "/Users/ash/.nuget/packages/": {}
@@ -69,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ash/Desktop/IMDBApplication/IMDBApplication/IMDBApplication.csproj",
+      "projectUniqueName": "/Users/ash/Documents/IMDBApplication/IMDBApplication/IMDBApplication.csproj",
       "projectName": "IMDBApplication",
-      "projectPath": "/Users/ash/Desktop/IMDBApplication/IMDBApplication/IMDBApplication.csproj",
+      "projectPath": "/Users/ash/Documents/IMDBApplication/IMDBApplication/IMDBApplication.csproj",
       "packagesPath": "/Users/ash/.nuget/packages/",
-      "outputPath": "/Users/ash/Desktop/IMDBApplication/IMDBApplication/obj/",
+      "outputPath": "/Users/ash/Documents/IMDBApplication/IMDBApplication/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ash/.config/NuGet/NuGet.Config"
@@ -87,11 +31,7 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {
-            "/Users/ash/Desktop/IMDBApplication/IMDBService/IMDBService.csproj": {
-              "projectPath": "/Users/ash/Desktop/IMDBApplication/IMDBService/IMDBService.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -118,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,6 +1,6 @@
 ﻿namespace IMDBDomain
 {
-    public class Actor:Person
+    public class producer:Person
     {
 
     }

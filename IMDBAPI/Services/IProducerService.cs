@@ -1,10 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using IMDBAPI.Models.Request;
+using IMDBAPI.Models.Response;
+
 namespace IMDBAPI.Services
 {
-    public class IProducerService
+    public interface IProducerService
     {
-        public IProducerService()
-        {
-        }
+        public IEnumerable<ProducerResponse> GetAllProducers();
+        public ProducerResponse GetProducerById(int Id);
+        public void AddProducer(ProducerRequest producer);
+        public void UpdateProducer(int Id, ProducerRequest producer);
+        public void DeleteProducer(int Id);
     }
 }

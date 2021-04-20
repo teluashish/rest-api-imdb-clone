@@ -10,7 +10,7 @@ namespace IMDBApplication
 
             bool isExit = false;
             int choice, producerIdx, year;
-            string name, plot, actorsString, dob;
+            string name, plot, producersString, dob;
             
 
             ApplicationService applicationService = new ApplicationService();
@@ -19,7 +19,7 @@ namespace IMDBApplication
             while (!isExit)
             {
 
-                Console.WriteLine("\nPress 1-6 to choose an option\n1.List Movies\n2.Add Movie\n3.Add Actor\n4.Add Producer\n5.Delete Movie\n6.Exit\n");
+                Console.WriteLine("\nPress 1-6 to choose an option\n1.List Movies\n2.Add Movie\n3.Add producer\n4.Add Producer\n5.Delete Movie\n6.Exit\n");
             
                 try
                 {
@@ -52,21 +52,21 @@ namespace IMDBApplication
                       
                         producerIdx = int.Parse(Console.ReadLine());
            
-                        Console.WriteLine("Choose Actors");
-                        applicationService.ShowAllActors();
-                        actorsString = Console.ReadLine();
+                        Console.WriteLine("Choose producers");
+                        applicationService.ShowAllproducers();
+                        producersString = Console.ReadLine();
                        
-                        applicationService.AddMovie(name,plot,year,producerIdx,actorsString);
+                        applicationService.AddMovie(name,plot,year,producerIdx,producersString);
                         break;
 
                     case 3:
-                        Console.WriteLine("Enter Actor Name:");
+                        Console.WriteLine("Enter producer Name:");
                         name = Console.ReadLine();
                         
                         Console.WriteLine("Enter Date of Birth in the format dd/mm/yyyy");
                         dob = Console.ReadLine();
                
-                        applicationService.AddActor(name, dob);
+                        applicationService.Addproducer(name, dob);
                         break;
 
                     case 4:

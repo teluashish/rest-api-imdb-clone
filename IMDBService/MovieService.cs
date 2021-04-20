@@ -10,9 +10,9 @@ namespace IMDBService
 
         private MovieRepository _movieRepo = new MovieRepository();
         public ProducerService _producerService = new ProducerService();
-        public ActorService _actorService = new ActorService();
+        
 
-        public void AddMovie(string name, string plot, int year, int producerIdx, int[] actorIdx)
+        public void AddMovie(string name, string plot, int year, int producerIdx, int[] producerIdx)
         {
             
             Movie movie = new Movie
@@ -24,10 +24,10 @@ namespace IMDBService
                 Producer = _producerService.GetProducer(producerIdx)
 
             };
-            foreach (var idx in actorIdx)
+            foreach (var idx in producerIdx)
             {
    
-                movie.ActorList.Add(_actorService.GetActor(idx));
+                movie.producerList.Add(_producerService.Getproducer(idx));
             }
 
             _movieRepo.AddMovie(movie);
@@ -45,9 +45,9 @@ namespace IMDBService
                 Console.WriteLine("Movie year of release: "+movie.Year);
                 Console.WriteLine("Movie Producer: "+movie.Producer.Name);
                 Console.WriteLine("Movie Cast:");
-                foreach (var actor in movie.ActorList)
+                foreach (var producer in movie.producerList)
                 {
-                    Console.WriteLine(actor.Name);
+                    Console.WriteLine(producer.Name);
                 }
 
             }

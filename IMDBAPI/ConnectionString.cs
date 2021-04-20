@@ -3,8 +3,6 @@ namespace IMDBAPI
 {
     public class ConnectionString
     {
-        public ConnectionString()
-        {
-        }
+        public string DB { get; set; }
     }
 }

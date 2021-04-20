@@ -40,3 +40,7 @@
 /Users/ash/Desktop/IMDBApp/IMDBService/obj/Debug/netcoreapp3.1/IMDBService.csproj.CopyComplete
 /Users/ash/Desktop/IMDBApp/IMDBService/obj/Debug/netcoreapp3.1/IMDBService.dll
 /Users/ash/Desktop/IMDBApp/IMDBService/obj/Debug/netcoreapp3.1/IMDBService.pdb
+/Users/ash/Documents/IMDBApplication/IMDBService/obj/Debug/netcoreapp3.1/IMDBService.csprojAssemblyReference.cache
+/Users/ash/Documents/IMDBApplication/IMDBService/obj/Debug/netcoreapp3.1/IMDBService.AssemblyInfoInputs.cache
+/Users/ash/Documents/IMDBApplication/IMDBService/obj/Debug/netcoreapp3.1/IMDBService.AssemblyInfo.cs
+/Users/ash/Documents/IMDBApplication/IMDBService/obj/Debug/netcoreapp3.1/IMDBService.csproj.CoreCompileInputs.cache

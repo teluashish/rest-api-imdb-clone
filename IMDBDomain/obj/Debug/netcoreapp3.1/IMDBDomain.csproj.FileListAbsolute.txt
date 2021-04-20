@@ -25,3 +25,12 @@
 /Users/ash/Desktop/IMDBApp/IMDBDomain/obj/Debug/netcoreapp3.1/IMDBDomain.csproj.CoreCompileInputs.cache
 /Users/ash/Desktop/IMDBApp/IMDBDomain/obj/Debug/netcoreapp3.1/IMDBDomain.dll
 /Users/ash/Desktop/IMDBApp/IMDBDomain/obj/Debug/netcoreapp3.1/IMDBDomain.pdb
+/Users/ash/Documents/IMDBApplication/IMDBDomain/bin/Debug/netcoreapp3.1/IMDBDomain.deps.json
+/Users/ash/Documents/IMDBApplication/IMDBDomain/bin/Debug/netcoreapp3.1/IMDBDomain.dll
+/Users/ash/Documents/IMDBApplication/IMDBDomain/bin/Debug/netcoreapp3.1/IMDBDomain.pdb
+/Users/ash/Documents/IMDBApplication/IMDBDomain/obj/Debug/netcoreapp3.1/IMDBDomain.AssemblyInfoInputs.cache
+/Users/ash/Documents/IMDBApplication/IMDBDomain/obj/Debug/netcoreapp3.1/IMDBDomain.AssemblyInfo.cs
+/Users/ash/Documents/IMDBApplication/IMDBDomain/obj/Debug/netcoreapp3.1/IMDBDomain.csproj.CoreCompileInputs.cache
+/Users/ash/Documents/IMDBApplication/IMDBDomain/obj/Debug/netcoreapp3.1/IMDBDomain.dll
+/Users/ash/Documents/IMDBApplication/IMDBDomain/obj/Debug/netcoreapp3.1/IMDBDomain.pdb
+/Users/ash/Documents/IMDBApplication/IMDBDomain/obj/Debug/netcoreapp3.1/IMDBDomain.csprojAssemblyReference.cache

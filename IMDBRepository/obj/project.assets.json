@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
-      "IMDBDomain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/IMDBDomain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IMDBDomain.dll": {}
-        }
-      }
-    }
+    ".NETCoreApp,Version=v3.1": {}
   },
-  "libraries": {
-    "IMDBDomain/1.0.0": {
-      "type": "project",
-      "path": "../IMDBDomain/IMDBDomain.csproj",
-      "msbuildProject": "../IMDBDomain/IMDBDomain.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
-      "IMDBDomain >= 1.0.0"
-    ]
+    ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
     "/Users/ash/.nuget/packages/": {}
@@ -32,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ash/Desktop/IMDBApplication/IMDBRepository/IMDBRepository.csproj",
+      "projectUniqueName": "/Users/ash/Documents/IMDBApplication/IMDBRepository/IMDBRepository.csproj",
       "projectName": "IMDBRepository",
-      "projectPath": "/Users/ash/Desktop/IMDBApplication/IMDBRepository/IMDBRepository.csproj",
+      "projectPath": "/Users/ash/Documents/IMDBApplication/IMDBRepository/IMDBRepository.csproj",
       "packagesPath": "/Users/ash/.nuget/packages/",
-      "outputPath": "/Users/ash/Desktop/IMDBApplication/IMDBRepository/obj/",
+      "outputPath": "/Users/ash/Documents/IMDBApplication/IMDBRepository/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ash/.config/NuGet/NuGet.Config"
@@ -50,11 +31,7 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {
-            "/Users/ash/Desktop/IMDBApplication/IMDBDomain/IMDBDomain.csproj": {
-              "projectPath": "/Users/ash/Desktop/IMDBApplication/IMDBDomain/IMDBDomain.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -81,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }

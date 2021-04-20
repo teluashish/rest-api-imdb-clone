@@ -120,7 +120,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "\"Bio\":\"Ukranian\",\"Dob\":\"1973-06-22\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 10
- testRunner.And("the response status code is \'200 OK\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the response status code is \"200\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -164,7 +164,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("response data must look like this \'\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 16
- testRunner.And("the response status code is \'404 NOT FOUND\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the response status code is \"404\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -210,7 +210,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "ale\",\"Bio\":\"Ukranian\",\"Dob\":\"1973-06-22\"}]\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 22
- testRunner.And("the response status code is \'200 OK\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the response status code is \"200\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -254,7 +254,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("response data must look like this \'[]\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 28
- testRunner.And("the response status code is \'404 NOT FOUND\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the response status code is \"404\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -296,43 +296,20 @@ this.ScenarioInitialize(scenarioInfo);
                         "istian Bale\",\"Gender\":\"Male\",\"Bio\":\"British\",\"Dob\":\"1979-03-02\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 34
- testRunner.Then("the Actor should be added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 35
- testRunner.And("the response status code is \'200 OK\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("the response status code is \"200\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableTheoryAttribute(DisplayName="Adding an Actor with invalid data")]
+        [Xunit.SkippableFactAttribute(DisplayName="Updating an Actor with valid data")]
         [Xunit.TraitAttribute("FeatureTitle", "ActorFeature")]
-        [Xunit.TraitAttribute("Description", "Adding an Actor with invalid data")]
-        [Xunit.InlineDataAttribute("", "British", "1979-03-02", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "", "1979-03-02", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "British", "", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "British", "1979-03-02", "", new string[0])]
-        [Xunit.InlineDataAttribute("", "", "1979-03-02", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("", "British", "", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("", "British", "1979-03-02", "", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "", "", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "", "1979-03-02", "", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "British", "", "", new string[0])]
-        [Xunit.InlineDataAttribute("", "", "", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("", "", "1979-03-02", "", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "", "", "", new string[0])]
-        [Xunit.InlineDataAttribute("", "British", "", "", new string[0])]
-        [Xunit.InlineDataAttribute("", "", "1979-03-02", "", new string[0])]
-        [Xunit.InlineDataAttribute("", "", "", "", new string[0])]
-        public virtual void AddingAnActorWithInvalidData(string name, string bio, string dob, string gender, string[] exampleTags)
+        [Xunit.TraitAttribute("Description", "Updating an Actor with valid data")]
+        public virtual void UpdatingAnActorWithValidData()
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Name", name);
-            argumentsOfScenario.Add("Bio", bio);
-            argumentsOfScenario.Add("Dob", dob);
-            argumentsOfScenario.Add("Gender", gender);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding an Actor with invalid data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Updating an Actor with valid data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 38
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -357,56 +334,11 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 40
- testRunner.When(string.Format("I make POST Request to endpoint \'actors/1\' with body message \'{0}\' \'{1}\' \'{2}\' \'{" +
-                            "3}\'", name, bio, dob, gender), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 41
- testRunner.Then("the response status code is \'400 Bad Request\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Updating an Actor with valid data")]
-        [Xunit.TraitAttribute("FeatureTitle", "ActorFeature")]
-        [Xunit.TraitAttribute("Description", "Updating an Actor with valid data")]
-        public virtual void UpdatingAnActorWithValidData()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Updating an Actor with valid data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 62
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 63
- testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 64
  testRunner.When("I make PUT Request to endpoint \'actors/1\' with body message \'{\"Name\":\"Christian B" +
                         "ale\",\"Gender\":\"Male\",\"Bio\":\"British\",\"Dob\":\"1979-03-02\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 65
- testRunner.Then("the Actor should be updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 66
- testRunner.And("the response status code is \'200 OK\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 41
+ testRunner.And("the response status code is \"200\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -420,7 +352,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Updating a non-existing Actor", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 68
+#line 43
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -440,77 +372,15 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 69
+#line 44
  testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 70
+#line 45
  testRunner.When("I make PUT Request to endpoint \'actors/10\' with body message \'{\"Name\":\"Christian " +
                         "Bale\",\"Gender\":\"Male\",\"Bio\":\"British\",\"Dob\":\"1979-03-02\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 71
- testRunner.Then("the response status code is \'404 Not Found\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableTheoryAttribute(DisplayName="Updating an Actor with invalid data")]
-        [Xunit.TraitAttribute("FeatureTitle", "ActorFeature")]
-        [Xunit.TraitAttribute("Description", "Updating an Actor with invalid data")]
-        [Xunit.InlineDataAttribute("", "British", "1979-03-02", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "", "1979-03-02", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "British", "", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "British", "1979-03-02", "", new string[0])]
-        [Xunit.InlineDataAttribute("", "", "1979-03-02", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("", "British", "", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("", "British", "1979-03-02", "", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "", "", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "", "1979-03-02", "", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "British", "", "", new string[0])]
-        [Xunit.InlineDataAttribute("", "", "", "Male", new string[0])]
-        [Xunit.InlineDataAttribute("", "", "1979-03-02", "", new string[0])]
-        [Xunit.InlineDataAttribute("Christian Bale", "", "", "", new string[0])]
-        [Xunit.InlineDataAttribute("", "British", "", "", new string[0])]
-        [Xunit.InlineDataAttribute("", "", "1979-03-02", "", new string[0])]
-        [Xunit.InlineDataAttribute("", "", "", "", new string[0])]
-        public virtual void UpdatingAnActorWithInvalidData(string name, string bio, string dob, string gender, string[] exampleTags)
-        {
-            string[] tagsOfScenario = exampleTags;
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Name", name);
-            argumentsOfScenario.Add("Bio", bio);
-            argumentsOfScenario.Add("Dob", dob);
-            argumentsOfScenario.Add("Gender", gender);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Updating an Actor with invalid data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 73
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 74
- testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 75
- testRunner.When(string.Format("I make PUT Request to endpoint \'actors/1\' with body message \'{0}\' \'{1}\' \'{2}\' \'{3" +
-                            "}\'", name, bio, dob, gender), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 76
- testRunner.Then("the response status code is \'400 Bad Request\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 46
+ testRunner.Then("the response status code is \"404\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -524,7 +394,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deleting an Actor with valid data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 97
+#line 50
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -544,17 +414,14 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 98
+#line 51
  testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 99
- testRunner.When("I make DELETE Request to endpoint \'actors/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 52
+ testRunner.When("I make DELETE Request \'actors/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 100
- testRunner.Then("the Actor should be deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 101
- testRunner.And("the response status code is \'200 OK\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 53
+ testRunner.And("the response status code is \"200\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -568,7 +435,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deleting a non-existing Actor", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 103
+#line 55
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -588,14 +455,14 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 104
+#line 56
  testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 105
+#line 57
  testRunner.When("I make DELETE Request \'/actors/10\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 106
- testRunner.Then("the response status code is \'404 NOT FOUND\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 58
+ testRunner.Then("the response status code is \"404\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

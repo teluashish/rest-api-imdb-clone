@@ -35,6 +35,7 @@ namespace IMDB.Tests
 
         }
 
+        
         [When(@"I make POST Request to endpoint '(.*)' with body message '(.*)'")]
         public virtual async Task WhenIMakePOSTRequestToEndpointWithBodyMessage(string resourceEndPoint, string dataJson)
         {
@@ -45,7 +46,7 @@ namespace IMDB.Tests
 
 
 
-        [Then(@"the response status code is '(.*)'")]
+        [Then(@"the response status code is '(\d*)'")]
         public void ThenTheResponseStatusCodeIs(int statusCode)
         {
             var expectedStatusCode = (System.Net.HttpStatusCode)statusCode;

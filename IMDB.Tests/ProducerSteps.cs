@@ -1,8 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
-using TechTalk.SpecFlow;
-using Microsoft.Extensions.DependencyInjection;
-using IMDB.Tests.Steps;
+﻿using TechTalk.SpecFlow;
 
 namespace IMDB.Tests
 {
@@ -11,13 +7,7 @@ namespace IMDB.Tests
     public class ProducerSteps : ProducerBaseSteps
     {
         public ProducerSteps(CustomWebApplicationFactory<TestStartup> factory)
-            : base(factory.WithWebHostBuilder(builder =>
-            {
-                builder.ConfigureServices(services =>
-                {
-                    services.AddScoped(services => ProducerMock.producerRepoMock.Object);
-                });
-            }))
+            : base(factory)
 
         {
 

@@ -4,34 +4,34 @@ using System.Linq;
 
 namespace IMDBRepository
 {
-    public class ActorRepository
+    public class producerRepository
     {
-        private readonly List<Actor> _actorList;
-        public ActorRepository()
+        private readonly List<producer> _producerList;
+        public producerRepository()
         {
-            _actorList = new List<Actor>();
+            _producerList = new List<producer>();
         }
-        public void AddActor(Actor actor)
+        public void Addproducer(producer producer)
         {
-            _actorList.Add(actor);
+            _producerList.Add(producer);
         }
-        public Actor GetActor(int idx)
+        public producer Getproducer(int idx)
         {
-            return _actorList[idx];
+            return _producerList[idx];
         }
         public int GetCount()
         {
-            return _actorList.Count;
+            return _producerList.Count;
         }
-        public IEnumerable<Actor> GetActors()
+        public IEnumerable<producer> Getproducers()
         {
-            foreach(var actor in _actorList)
-                yield return actor;
+            foreach(var producer in _producerList)
+                yield return producer;
         }
 
-        public List<Actor> GetAllActors()
+        public List<producer> GetAllproducers()
         {
-            return _actorList.ToList();
+            return _producerList.ToList();
         }
 
     }

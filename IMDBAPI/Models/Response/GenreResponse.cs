@@ -3,8 +3,8 @@ namespace IMDBAPI.Models.Response
 {
     public class GenreResponse
     {
-        public GenreResponse()
-        {
-        }
+        
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }
