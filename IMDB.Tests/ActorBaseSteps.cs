@@ -6,22 +6,23 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using TechTalk.SpecFlow;
 using Xunit;
 using Microsoft.Extensions.DependencyInjection;
+using IMDBAPI;
 
 namespace IMDB.Tests
 {
-    [Binding]
-    public class ActorBaseSteps
+    
+    public class ActorBaseSteps : IClassFixture<CustomWebApplicationFactory<TestStartup>>
     {
-        private readonly CustomWebApplicationFactory<TestStartup> _factory;
+
         private  HttpClient _client;
         private HttpResponseMessage _httpResponseMessage;
 
-        public ActorBaseSteps(CustomWebApplicationFactory<TestStartup> webApplicationFactory)
+        public WebApplicationFactory<TestStartup> _factory { get; set; }
+
+
+        public ActorBaseSteps(WebApplicationFactory<TestStartup> webApplicationFactory)
         {
-            _factory = (CustomWebApplicationFactory<TestStartup>)webApplicationFactory.WithWebHostBuilder(builder => builder.ConfigureServices(services =>
-            {
-                services.AddScoped(services => ActorMock.actorRepoMock.Object);
-            }));
+            _factory = webApplicationFactory;
         }
 
         [Given(@"I am Client")]
@@ -29,9 +30,9 @@ namespace IMDB.Tests
         {
             _client = _factory.CreateClient(new WebApplicationFactoryClientOptions
             {
-                AllowAutoRedirect = false
-            });
-            ActorMock.MockInitialize();
+                BaseAddress = new Uri("http://localhost/")
+                
+            }); 
 
         }
 
@@ -45,14 +46,12 @@ namespace IMDB.Tests
         }
 
 
-
-        [Then(@"the response status code is '(\d*)'")]
+        [Then(@"the response status code is (.*)")]
         public void ThenTheResponseStatusCodeIs(int statusCode)
         {
             var expectedStatusCode = (System.Net.HttpStatusCode)statusCode;
             Assert.Equal(expectedStatusCode, _httpResponseMessage.StatusCode);
         }
-
 
         //deleting a non-existing actor
         [When(@"I make DELETE Request '(.*)'")]

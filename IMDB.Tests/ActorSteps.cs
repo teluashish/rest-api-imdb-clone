@@ -1,16 +1,22 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
 using Microsoft.Extensions.DependencyInjection;
-
+using IMDBAPI;
 
 namespace IMDB.Tests
 {
-    [Scope(Feature = "Actor Resource")]
+    [Scope(Feature = "ActorFeature")]
     [Binding]
     public class ActorSteps:ActorBaseSteps
     {
-        public ActorSteps(CustomWebApplicationFactory<TestStartup> factory):base(factory)
+        public ActorSteps(CustomWebApplicationFactory<TestStartup> factory)
+            : base(factory.WithWebHostBuilder(builder =>
+            {
+                builder.ConfigureServices(services =>
+                  {
+                      services.AddScoped(service => ActorMock.actorRepoMock.Object);
+                  });
+
+            }))
         {
 
         }

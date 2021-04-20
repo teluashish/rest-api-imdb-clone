@@ -28,8 +28,8 @@ namespace IMDBAPI.Repositories
             foreach (var m in connection.Query<MovieResponse>(@"SELECT * FROM Movies;")) {
                 var Id = m.Id;
                 var movie = connection.QuerySingle<Movie>(@"Select * FROM Movies A WHERE A.ID = " + Id + ";");
-                var actors = connection.Query<Actor>(@"SELECT * FROM Actors A INNER JOIN MovieActorMapping MA ON MA.ActorId = A.ActorId Where MA.MovieId = " + Id + ";").AsList<Actor>();
-                var genres = connection.Query<Genre>(@"SELECT * FROM Genres G INNER JOIN MovieGenreMapping MG ON MG.GenreId = G.GenreId Where MG.MovieId = " + Id + ";").AsList<Genre>();
+                var actors = connection.Query<Actor>(@"SELECT * FROM Actors A INNER JOIN MovieActorMapping MA ON MA.ActorId = A.Id Where MA.MovieId = " + Id + ";").AsList<Actor>();
+                var genres = connection.Query<Genre>(@"SELECT * FROM Genres G INNER JOIN MovieGenreMapping MG ON MG.GenreId = G.Id Where MG.MovieId = " + Id + ";").AsList<Genre>();
                 movieResponses.Add(new MovieResponse { Id = movie.Id, Name = movie.Name, Year = movie.Year, Plot = movie.Plot, ProducerId = movie.ProducerId, Actors = actors, Genres = genres, CoverImage = movie.CoverImage });
             }
             return movieResponses;
@@ -38,28 +38,32 @@ namespace IMDBAPI.Repositories
         {
             using var connection = new SqlConnection(_connectionString.DB);
             var movie = connection.QuerySingle<Movie>(@"Select * FROM Movies A WHERE A.ID = " + Id + ";");
-            var actors = connection.Query<Actor>(@"SELECT * FROM Actors A INNER JOIN MovieActorMapping MA ON MA.ActorId = A.ActorId Where MA.MovieId = "+Id+";").AsList<Actor>();
-            var genres = connection.Query<Genre>(@"SELECT * FROM Genres G INNER JOIN MovieGenreMapping MG ON MG.GenreId = G.GenreId Where MG.MovieId = " + Id + ";").AsList<Genre>();
+            var actors = connection.Query<Actor>(@"SELECT * FROM Actors A INNER JOIN MovieActorMapping MA ON MA.ActorId = A.Id Where MA.MovieId = "+Id+";").AsList<Actor>();
+            var genres = connection.Query<Genre>(@"SELECT * FROM Genres G INNER JOIN MovieGenreMapping MG ON MG.GenreId = G.Id Where MG.MovieId = " + Id + ";").AsList<Genre>();
             return new MovieResponse { Id = movie.Id,Name = movie.Name,Year = movie.Year, Plot = movie.Plot, ProducerId = movie.ProducerId,Actors = actors, Genres = genres, CoverImage = movie.CoverImage };
         }
 
         public void AddMovie(Movie movie, string MovieActorMappingString,string MovieGenreMappingString)
         {
             using var connection = new SqlConnection(_connectionString.DB);
-            connection.Execute("Insert_Movie", new { movie.Name, movie.Year, movie.Plot, movie.ProducerId, MovieActorMappingString, MovieGenreMappingString, CoverImage = movie.CoverImage }, commandType: CommandType.StoredProcedure);
+            var ActorIds = MovieActorMappingString;
+            var GenreIds = MovieGenreMappingString;
+            connection.Execute("Insert_Movie", new { movie.Id,movie.Name, movie.Year, movie.Plot, movie.ProducerId, ActorIds, GenreIds, CoverImage = movie.CoverImage }, commandType: CommandType.StoredProcedure);
         }
 
-        public void UpdateMovie(int ID, Movie movie, string MovieActorMappingString, string MovieGenreMappingString)
+        public void UpdateMovie(int ID, Movie movie,  string MovieActorMappingString, string MovieGenreMappingString)
         {
             using var connection = new SqlConnection(_connectionString.DB);
-            connection.Execute("Update_Movie", new { ID, movie.Name, movie.Year, movie.Plot, movie.ProducerId, MovieActorMappingString, MovieGenreMappingString, CoverImage = movie.CoverImage }, commandType: CommandType.StoredProcedure);
+            var ActorIds = MovieActorMappingString;
+            var GenreIds = MovieGenreMappingString;
+            connection.Execute("Update_Movie", new { ID, movie.Name, movie.Year, movie.Plot, movie.ProducerId, ActorIds, GenreIds, CoverImage = movie.CoverImage }, commandType: CommandType.StoredProcedure);
         }
 
         public void DeleteMovie(int Id) {
-            using var connection = new SqlConnection(_connectionString.DB);
-            connection.Execute(@"DELETE FROM Movies M WHERE M.ID = @ID", new { Id });
-            connection.Execute(@"DELETE FROM MovieActorMapping MA WHERE MA.ID = @ID", new { Id });
-            connection.Execute(@"DELETE FROM MovieGenreMapping MG WHERE MG.ID = @ID", new { Id });
+            using var connection = new SqlConnection(_connectionString.DB);         
+            connection.Execute(@"DELETE FROM MovieActorMapping WHERE MovieActorMapping.MovieId = @Id", new { Id });
+            connection.Execute(@"DELETE FROM MovieGenreMapping WHERE MovieGenreMapping.MovieId = @Id", new { Id });
+            connection.Execute(@"DELETE FROM Movies WHERE Movies.Id = @Id", new { Id });
         }
 
 

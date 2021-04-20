@@ -43,7 +43,7 @@ namespace IMDBAPI.Repositories
         public void DeleteProducer(int ID)
         {
             using var connection = new SqlConnection(_connectionString.DB);
-            connection.Execute(@"DELETE FROM Producers A WHERE A.ID = @ID", new { ID });
+            connection.Execute(@"DELETE FROM Producers WHERE Producers.ID = @ID", new { ID });
         }
 
 

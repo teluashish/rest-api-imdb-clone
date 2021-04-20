@@ -175,4 +175,21 @@
         <ProjectReference Include="..\IMDBAPI\IMDBAPI.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Xunit\" />
+  </ItemGroup>
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="ActorFeature.feature">
+      <Visible>False</Visible>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="MovieFeature.feature">
+      <Visible>False</Visible>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="ProducerFeature.feature">
+      <Visible>False</Visible>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="GenreFeature.feature">
+      <Visible>False</Visible>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
 </Project>

@@ -38,7 +38,7 @@ namespace IMDBAPI.Repositories
         }
         public void DeleteActor(int ID){
             using var connection = new SqlConnection(_connectionString.DB);
-            connection.Execute(@"DELETE FROM Actors A WHERE A.ID = @ID", new { ID });
+            connection.Execute(@"DELETE FROM Actors WHERE Actors.ID = @ID", new { ID });
         }
 
    

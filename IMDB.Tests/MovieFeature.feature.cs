@@ -119,7 +119,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then(@"response data must look like this '{""Id"":1,""Name"":""Rocky"",""Year"":""2021"",""Plot"":""Happy Movie"",""Actors"":[{""Id"":1,""Name"":""Christian Bale"",""Gender"":""Male"",""Bio"":""British"",""Dob"":""1979-03-02""},{""Id"":2,""Name"":""Mila Kunis"",""Gender"":""Female"",""Bio"":""Ukranian"",""Dob"":""1973-06-22""}],""Genres"":""[{""Id"":1, ""Name"":""Thriller""},{""Id"":2, ""Name"":""Drama""}]"", ""ProducerId"":""1"", ""CoverImage"":""url""}'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 10
- testRunner.And("the response status code is \"200\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the response status code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -163,7 +163,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("response data must look like this \'\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 16
- testRunner.And("the response status code is \"404\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the response status code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -207,7 +207,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then(@"response data must look like this '[{""Id"":1,""Name"":""Rocky"",""Year"":""2021"",""Plot"":""Happy Movie"",""Actors"":[{""Id"":1,""Name"":""Christian Bale"",""Gender"":""Male"",""Bio"":""British"",""Dob"":""1979-03-02""},{""Id"":2,""Name"":""Mila Kunis"",""Gender"":""Female"",""Bio"":""Ukranian"",""Dob"":""1973-06-22""}],""Genres"":""[{""Id"":1, ""Name"":""Thriller""},{""Id"":2, ""Name"":""Drama""}]"", ""ProducerId"":""1"", ""CoverImage"":""url""}]'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 22
- testRunner.And("the response status code is \"200\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the response status code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -251,7 +251,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("response data must look like this \'[]\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 28
- testRunner.And("the response status code is \"404\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the response status code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -294,7 +294,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "d\":\"1\", \"CoverImage\":\"url\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 34
- testRunner.And("the response status code is \"200\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("the response status code is 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -336,7 +336,7 @@ this.ScenarioInitialize(scenarioInfo);
                         ",\"Gender\":\"Female\",\"Bio\":\"Ukranian\",\"Dob\":\"1973-06-22\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 41
- testRunner.And("the response status code is \"200\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("the response status code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -378,7 +378,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "\",\"Gender\":\"Female\",\"Bio\":\"Ukranian\",\"Dob\":\"1973-06-22\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 46
- testRunner.Then("the response status code is \"404\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the response status code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -416,10 +416,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 52
- testRunner.When("I make DELETE Request to endpoint \'movies/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I make DELETE Request \'movies/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 53
- testRunner.And("the response status code is \"200\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("the response status code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -460,7 +460,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I make DELETE Request \'/movies/10\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 58
- testRunner.Then("the response status code is \"404\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the response status code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

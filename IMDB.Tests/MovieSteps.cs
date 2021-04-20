@@ -1,4 +1,5 @@
-﻿using TechTalk.SpecFlow;
+﻿using IMDBAPI;
+using TechTalk.SpecFlow;
 
 namespace IMDB.Tests
 {

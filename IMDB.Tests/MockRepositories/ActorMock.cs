@@ -44,7 +44,7 @@ namespace IMDB.Tests
 
             });
 
-            actorRepoMock.Setup(_=>_.DeleteActor(It.IsAny<int>())).Callback((int i)=> { actorss.RemoveAll((x) => x.Id == i); });
+            actorRepoMock.Setup(_ => _.DeleteActor(It.IsAny<int>())).Callback((int i) => { actorss.RemoveAll((x) => x.Id == i); });
             actorRepoMock.Setup(_ => _.AddActor(It.IsAny<Actor>())).Callback((Actor a) => { actorss.Add(a); });
 
         }

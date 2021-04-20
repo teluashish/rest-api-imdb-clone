@@ -1,5 +1,5 @@
 ﻿using TechTalk.SpecFlow;
-
+using IMDBAPI;
 namespace IMDB.Tests
 {
     [Scope(Feature = "Genre Resource")]
