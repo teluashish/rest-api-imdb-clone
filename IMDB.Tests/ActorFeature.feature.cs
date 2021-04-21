@@ -116,52 +116,11 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I make GET Request \'/actors/2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
- testRunner.Then("response data must look like this \'{\"Id\":2,\"Name\":\"Mila Kunis\",\"Gender\":\"Female\"," +
-                        "\"Bio\":\"Ukranian\",\"Dob\":\"1973-06-22\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("response data must look like this \'{\"id\":2,\"name\":\"Mila Kunis\",\"bio\":\"Ukranian\",\"" +
+                        "dob\":\"1973-06-22T00:00:00\",\"gender\":\"Female\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 10
  testRunner.And("the response status code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Get non-existing actor")]
-        [Xunit.TraitAttribute("FeatureTitle", "ActorFeature")]
-        [Xunit.TraitAttribute("Description", "Get non-existing actor")]
-        public virtual void GetNon_ExistingActor()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get non-existing actor", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 12
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 13
- testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 14
- testRunner.When("I make GET Request \'/actors/10\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 15
- testRunner.Then("the response status code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -202,56 +161,12 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I make GET Request \'/actors\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 20
- testRunner.Then("response data must look like this \'[{\"Id\":1,\"Name\":\"Christian Bale\",\"Gender\":\"Mal" +
-                        "e\",\"Bio\":\"British\",\"Dob\":\"1979-03-02\"},{\"Id\":2,\"Name\":\"Mila Kunis\",\"Gender\":\"Fem" +
-                        "ale\",\"Bio\":\"Ukranian\",\"Dob\":\"1973-06-22\"}]\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("response data must look like this \'[{\"id\":1,\"name\":\"Christian Bale\",\"bio\":\"Britis" +
+                        "h\",\"dob\":\"1979-03-02T00:00:00\",\"gender\":\"Male\"},{\"id\":2,\"name\":\"Mila Kunis\",\"bio" +
+                        "\":\"Ukranian\",\"dob\":\"1973-06-22T00:00:00\",\"gender\":\"Female\"}]\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 21
  testRunner.And("the response status code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Get all non-existing actors")]
-        [Xunit.TraitAttribute("FeatureTitle", "ActorFeature")]
-        [Xunit.TraitAttribute("Description", "Get all non-existing actors")]
-        public virtual void GetAllNon_ExistingActors()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get all non-existing actors", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 23
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 24
- testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 25
- testRunner.When("I make GET Request \'/actors\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 26
- testRunner.Then("response data must look like this \'[]\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 27
- testRunner.And("the response status code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -289,8 +204,8 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 32
- testRunner.When("I make POST Request to endpoint \'actors/1\' with body message \'{\"Id\":1,\"Name\":\"Chr" +
-                        "istian Bale\",\"Gender\":\"Male\",\"Bio\":\"British\",\"Dob\":\"1979-03-02\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I make POST Request to endpoint \'/actors\' with body message \'{\"Id\":1,\"Name\":\"Chri" +
+                        "stian Bale\",\"Bio\":\"British\",\"Dob\":\"1979-03-02T00:00:00\",\"Gender\":\"Male\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 33
  testRunner.Then("the response status code is 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -331,53 +246,11 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 39
- testRunner.When("I make PUT Request to endpoint \'actors/1\' with body message \'{\"Name\":\"Christian B" +
-                        "ale\",\"Gender\":\"Male\",\"Bio\":\"British\",\"Dob\":\"1979-03-02\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I make PUT Request to endpoint \'/actors/1\' with body message \'{\"Name\":\"Christian " +
+                        "Bale\",\"Bio\":\"British\",\"Dob\":\"1979-03-02T00:00:00\",\"Gender\":\"Male\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 40
  testRunner.Then("the response status code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Updating a non-existing Actor")]
-        [Xunit.TraitAttribute("FeatureTitle", "ActorFeature")]
-        [Xunit.TraitAttribute("Description", "Updating a non-existing Actor")]
-        public virtual void UpdatingANon_ExistingActor()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Updating a non-existing Actor", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 42
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 43
- testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 44
- testRunner.When("I make PUT Request to endpoint \'actors/10\' with body message \'{\"Name\":\"Christian " +
-                        "Bale\",\"Gender\":\"Male\",\"Bio\":\"British\",\"Dob\":\"1979-03-02\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 45
- testRunner.Then("the response status code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -415,51 +288,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 51
- testRunner.When("I make DELETE Request \'actors/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I make DELETE Request \'/actors/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 52
  testRunner.Then("the response status code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Deleting a non-existing Actor")]
-        [Xunit.TraitAttribute("FeatureTitle", "ActorFeature")]
-        [Xunit.TraitAttribute("Description", "Deleting a non-existing Actor")]
-        public virtual void DeletingANon_ExistingActor()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deleting a non-existing Actor", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 54
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 55
- testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 56
- testRunner.When("I make DELETE Request \'/actors/10\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 57
- testRunner.Then("the response status code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

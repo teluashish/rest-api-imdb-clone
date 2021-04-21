@@ -10,8 +10,8 @@ using IMDBAPI;
 
 namespace IMDB.Tests
 {
-    
-    public class ActorBaseSteps : IClassFixture<CustomWebApplicationFactory<TestStartup>>
+    [Binding]
+    public class BaseSteps : IClassFixture<CustomWebApplicationFactory<TestStartup>>
     {
 
         private  HttpClient _client;
@@ -20,7 +20,7 @@ namespace IMDB.Tests
         public WebApplicationFactory<TestStartup> _factory { get; set; }
 
 
-        public ActorBaseSteps(WebApplicationFactory<TestStartup> webApplicationFactory)
+        public BaseSteps(WebApplicationFactory<TestStartup> webApplicationFactory)
         {
             _factory = webApplicationFactory;
         }
@@ -69,6 +69,8 @@ namespace IMDB.Tests
         {
              var postRelativeUri = new Uri(resourceEndPoint, UriKind.Relative);
              _httpResponseMessage = await _client.GetAsync(postRelativeUri).ConfigureAwait(false);
+            
+            
  
         }
 
@@ -94,3 +96,5 @@ namespace IMDB.Tests
 
     }
 }
+
+

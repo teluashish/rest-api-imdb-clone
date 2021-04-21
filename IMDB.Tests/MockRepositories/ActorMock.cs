@@ -20,6 +20,7 @@ namespace IMDB.Tests
                         Gender = "Male",
                         Bio = "British",
                         Dob = new DateTime(1979, 03, 02)
+                        
                     },
                     new Actor()
                     {
@@ -32,20 +33,21 @@ namespace IMDB.Tests
 
 
         public static void MockInitialize() {
-            actorRepoMock.Setup(_ => _.GetAllActors()).Returns(() => { return actorss; });
-            actorRepoMock.Setup(_ => _.GetActorById(It.IsAny<int>())).Returns((int i) => actorss.Where(x => x.Id == i).Single());
-            actorRepoMock.Setup(_ => _.UpdateActor(It.IsAny<int>(), It.IsAny<Actor>())).Callback((int i, Actor a) =>
-            {
-                var actor = actorss.Where(x => x.Id == i).Single();
-                actor.Name = a.Name;
-                actor.Bio = a.Bio;
-                actor.Dob = a.Dob;
-                actor.Gender = a.Gender;
+                actorRepoMock.Setup(_ => _.GetAllActors()).Returns(() => { return actorss; });
+                actorRepoMock.Setup(_ => _.GetActorById(It.IsAny<int>())).Returns((int i) => actorss.Where(x => x.Id == i).Single());
+                actorRepoMock.Setup(_ => _.UpdateActor(It.IsAny<int>(), It.IsAny<Actor>())).Callback((int i, Actor a) =>
+                {
+                    var actor = actorss.Where(x => x.Id == i).Single();
+                    actor.Name = a.Name;
+                    actor.Bio = a.Bio;
+                    actor.Dob = a.Dob;
+                    actor.Gender = a.Gender;
 
-            });
+                });
 
             actorRepoMock.Setup(_ => _.DeleteActor(It.IsAny<int>())).Callback((int i) => { actorss.RemoveAll((x) => x.Id == i); });
             actorRepoMock.Setup(_ => _.AddActor(It.IsAny<Actor>())).Callback((Actor a) => { actorss.Add(a); });
+  
 
         }
 

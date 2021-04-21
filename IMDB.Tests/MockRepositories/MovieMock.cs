@@ -42,6 +42,11 @@ namespace IMDB.Tests
                     }
                 }
 ,
+                Genres = new() {
+                    new Genre() { Id=1,Name="Thriller"},
+                    new Genre() { Id = 2, Name = "Drama" }
+
+                },
                 ProducerId = 1,
                 CoverImage = "url"
             }
@@ -53,7 +58,7 @@ namespace IMDB.Tests
         {
             movieRepoMock.Setup(_ => _.GetAllMovies()).Returns(() => { return movies; });
             movieRepoMock.Setup(_ => _.GetMovieById(It.IsAny<int>())).Returns((int i) => movies.Where(x => x.Id == i).Single());
-            movieRepoMock.Setup(_ => _.UpdateMovie(It.IsAny<int>(), It.IsAny<Movie>(),It.IsAny<string>(),It.IsAny<string>())).Callback((int i, Movie a) =>
+            movieRepoMock.Setup(_ => _.UpdateMovie(It.IsAny<int>(), It.IsAny<Movie>(),It.IsAny<string>(),It.IsAny<string>())).Callback((int i, Movie a,string ma,string mg) =>
             {
                 var movie = movies.Where(x => x.Id == i).Single();
                 movie.Name = a.Name;
@@ -65,7 +70,9 @@ namespace IMDB.Tests
             });
 
             movieRepoMock.Setup(_ => _.DeleteMovie(It.IsAny<int>())).Callback((int i) => { movies.RemoveAll((x) => x.Id == i); });
-            movieRepoMock.Setup(_ => _.AddMovie(It.IsAny<Movie>(), It.IsAny<string>(), It.IsAny<string>())).Callback((Movie a) => { });
+            movieRepoMock.Setup(_ => _.AddMovie(It.IsAny<Movie>(), It.IsAny<string>(), It.IsAny<string>())).Callback((Movie a,string ma,string mg) => {
+
+            });
 
         }
 

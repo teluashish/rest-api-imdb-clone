@@ -1,14 +1,22 @@
 ﻿using IMDBAPI;
 using TechTalk.SpecFlow;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace IMDB.Tests
 {
-    [Scope(Feature = "Movie Resource")]
+    [Scope(Feature = "MovieFeature")]
     [Binding]
-    public class MovieSteps : MovieBaseSteps
+    public class MovieSteps : BaseSteps
     {
         public MovieSteps(CustomWebApplicationFactory<TestStartup> factory)
-            : base(factory)
+            : base(factory.WithWebHostBuilder(builder =>
+            {
+                builder.ConfigureServices(services =>
+                {
+                    services.AddScoped(service => MovieMock.movieRepoMock.Object);
+                });
+
+            }))
 
         {
 

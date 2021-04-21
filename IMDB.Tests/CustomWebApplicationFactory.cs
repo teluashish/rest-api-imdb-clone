@@ -12,13 +12,6 @@ namespace IMDB.Tests
 {
     public class CustomWebApplicationFactory<TStartup> : WebApplicationFactory<TestStartup>
     {
-        protected override IHostBuilder CreateHostBuilder()
-        {
-            return base.CreateHostBuilder().ConfigureWebHostDefaults(webBuilder =>
-            {
-                webBuilder.UseStartup<TestStartup>();
-            });
-        }
         protected override IWebHostBuilder CreateWebHostBuilder()
         {
             // Set the environment as 'Testing '

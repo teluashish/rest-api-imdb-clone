@@ -6,7 +6,7 @@ namespace IMDB.Tests
 {
     [Scope(Feature = "ActorFeature")]
     [Binding]
-    public class ActorSteps:ActorBaseSteps
+    public class ActorSteps:BaseSteps
     {
         public ActorSteps(CustomWebApplicationFactory<TestStartup> factory)
             : base(factory.WithWebHostBuilder(builder =>

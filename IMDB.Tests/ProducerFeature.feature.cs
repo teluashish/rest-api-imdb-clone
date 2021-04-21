@@ -116,52 +116,11 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I make GET Request \'/producers/2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
- testRunner.Then("response data must look like this \'{\"Id\":2,\"Name\":\"Tom\",\"Gender\":\"Male\",\"Bio\":\"Am" +
-                        "erican\",\"Dob\":\"1973-06-22\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("response data must look like this \'{\"id\":2,\"name\":\"Tom\",\"bio\":\"American\",\"dob\":\"1" +
+                        "973-06-22T00:00:00\",\"gender\":\"Male\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 10
  testRunner.And("the response status code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Get non-existing producer")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProducerFeature")]
-        [Xunit.TraitAttribute("Description", "Get non-existing producer")]
-        public virtual void GetNon_ExistingProducer()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get non-existing producer", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 12
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 13
- testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 14
- testRunner.When("I make GET Request \'/producers/10\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 15
- testRunner.Then("the response status code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -202,56 +161,12 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I make GET Request \'/producers\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 20
- testRunner.Then("response data must look like this \'[{\"Id\":1,\"Name\":\"Arjun\",\"Gender\":\"Male\",\"Bio\":" +
-                        "\"Indian\",\"Dob\":\"1979-03-02\"},{\"Id\":2,\"Name\":\"Tom\",\"Gender\":\"Male\",\"Bio\":\"America" +
-                        "n\",\"Dob\":\"1973-06-22\"}]\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("response data must look like this \'[{\"id\":1,\"name\":\"Arjun\",\"bio\":\"Indian\",\"dob\":\"" +
+                        "1979-03-02T00:00:00\",\"gender\":\"Male\"},{\"id\":2,\"name\":\"Tom\",\"bio\":\"American\",\"dob" +
+                        "\":\"1973-06-22T00:00:00\",\"gender\":\"Male\"}]\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 21
  testRunner.And("the response status code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Get all non-existing producers")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProducerFeature")]
-        [Xunit.TraitAttribute("Description", "Get all non-existing producers")]
-        public virtual void GetAllNon_ExistingProducers()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get all non-existing producers", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 23
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 24
- testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 25
- testRunner.When("I make GET Request \'/producers\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 26
- testRunner.Then("response data must look like this \'[]\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 27
- testRunner.And("the response status code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -290,7 +205,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 32
  testRunner.When("I make POST Request to endpoint \'/producers\' with body message \'{\"Id\":1,\"Name\":\"A" +
-                        "rjun\",\"Gender\":\"Male\",\"Bio\":\"Indian\",\"Dob\":\"1979-03-02\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                        "rjun\",\"Bio\":\"Indian\",\"Dob\":\"1979-03-02T00:00:00\",\"Gender\":\"Male\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 33
  testRunner.Then("the response status code is 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -331,53 +246,11 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 40
- testRunner.When("I make PUT Request to endpoint \'producers/1\' with body message \'{Id:\"1\",\"Name\":\"A" +
-                        "rjun\",\"Gender\":\"Male\",\"Bio\":\"Indian\",\"Dob\":\"1979-03-02\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I make PUT Request to endpoint \'/producers/1\' with body message \'{\"name\":\"Arjun\"," +
+                        "\"bio\":\"Indian\",\"dob\":\"1979-03-02T00:00:00\",\"gender\":\"Male\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 41
  testRunner.Then("the response status code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Updating a non-existing Producer")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProducerFeature")]
-        [Xunit.TraitAttribute("Description", "Updating a non-existing Producer")]
-        public virtual void UpdatingANon_ExistingProducer()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Updating a non-existing Producer", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 43
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 44
- testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 45
- testRunner.When("I make PUT Request to endpoint \'producers/10\' with body message \'{Id:\"10\",\"Name\":" +
-                        "\"Arjun\",\"Gender\":\"Male\",\"Bio\":\"Indian\",\"Dob\":\"1979-03-02\"}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 46
- testRunner.Then("the response status code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -415,51 +288,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 52
- testRunner.When("I make DELETE Request \'producers/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I make DELETE Request \'/producers/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 53
  testRunner.Then("the response status code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Deleting non-existing Producer")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProducerFeature")]
-        [Xunit.TraitAttribute("Description", "Deleting non-existing Producer")]
-        public virtual void DeletingNon_ExistingProducer()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deleting non-existing Producer", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 55
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 56
- testRunner.Given("I am Client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 57
- testRunner.When("I make DELETE Request \'producers/10\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 58
- testRunner.Then("the response status code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
