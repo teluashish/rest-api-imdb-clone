@@ -8,26 +8,20 @@ using Microsoft.Extensions.Options;
 
 namespace IMDBAPI.Repositories
 {
-    public class GenreRepository : IGenreRepository
+    public class GenreRepository : BaseRepository<Genre>,IGenreRepository
     {
 
         private readonly ConnectionString _connectionString;
 
-        public GenreRepository(IOptions<ConnectionString> connectionString)
+        public GenreRepository(IOptions<ConnectionString> connectionString):base(connectionString)
         {
             _connectionString = connectionString.Value;
            
         }
-        public IEnumerable<Genre> GetAllGenres()
-        {
-            using var connection = new SqlConnection(_connectionString.DB);
-            return connection.Query<Genre>(@"SELECT * FROM Genres;");
-        }
-        public Genre GetGenreById(int ID)
-        {
-            using var connection = new SqlConnection(_connectionString.DB);
-            return connection.QuerySingle<Genre>(@"Select * FROM Genres A WHERE A.ID = " + ID + ";");
-        }
+        public IEnumerable<Genre> GetAllGenres() => GetAll(@"SELECT * FROM Genres;");
+   
+        public Genre GetGenreById(int ID) => GetById(@"Select * FROM Genres A WHERE A.ID = " + ID + ";");
+      
         public void AddGenre(Genre genre)
         {
             using var connection = new SqlConnection(_connectionString.DB);
@@ -40,11 +34,8 @@ namespace IMDBAPI.Repositories
             connection.Execute("Update_Genre", new { ID, genre.Name }, commandType: CommandType.StoredProcedure);
         }
 
-        public void DeleteGenre(int ID)
-        {
-            using var connection = new SqlConnection(_connectionString.DB);
-            connection.Execute(@"DELETE FROM Genres WHERE Genres.ID = @ID", new { ID });
-        }
+        public void DeleteGenre(int ID) => Delete(ID,@"DELETE FROM Genres WHERE Genres.ID = @ID");
+        
 
 
 

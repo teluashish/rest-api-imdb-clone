@@ -8,27 +8,21 @@ using Microsoft.Extensions.Options;
 
 namespace IMDBAPI.Repositories
 {
-    public class ProducerRepository : IProducerRepository
+    public class ProducerRepository : BaseRepository<Producer>, IProducerRepository
     {
 
         private readonly ConnectionString _connectionString;
-        
 
-        public ProducerRepository(IOptions<ConnectionString> connectionString)
+
+        public ProducerRepository(IOptions<ConnectionString> connectionString) : base(connectionString)
         {
             _connectionString = connectionString.Value;
 
         }
-        public IEnumerable<Producer> GetAllProducers()
-        {
-            using var connection = new SqlConnection(_connectionString.DB);
-            return connection.Query<Producer>(@"SELECT * FROM Producers;");
-        }
-        public Producer GetProducerById(int ID)
-        {
-            using var connection = new SqlConnection(_connectionString.DB);
-            return connection.QuerySingle<Producer>(@"Select * FROM Producers A WHERE A.ID = " + ID + ";");
-        }
+
+
+        public Producer GetProducerById(int ID) => GetById(@"Select * FROM Producers A WHERE A.ID = " + ID + ";");
+
         public void AddProducer(Producer producer)
         {
             using var connection = new SqlConnection(_connectionString.DB);
@@ -40,13 +34,9 @@ namespace IMDBAPI.Repositories
             using var connection = new SqlConnection(_connectionString.DB);
             connection.Execute("Update_Producer", new { ID, producer.Name, producer.Bio, producer.Dob, producer.Gender }, commandType: CommandType.StoredProcedure);
         }
-        public void DeleteProducer(int ID)
-        {
-            using var connection = new SqlConnection(_connectionString.DB);
-            connection.Execute(@"DELETE FROM Producers WHERE Producers.ID = @ID", new { ID });
-        }
+        public void DeleteProducer(int ID) => Delete(ID, @"DELETE FROM Producers WHERE Producers.ID = @ID");
 
-
+        IEnumerable<Producer> IProducerRepository.GetAllProducers() => GetAll(@"SELECT * FROM Producers;");
 
     }
 
