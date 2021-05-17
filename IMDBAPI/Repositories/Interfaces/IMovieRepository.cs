@@ -10,10 +10,10 @@ namespace IMDBAPI.Repositories
     {
         public IEnumerable<MovieResponse> GetAllMovies();
         public MovieResponse GetMovieById(int Id);
-        public void AddMovie(Movie movie, string MovieActorMappingString, string MovieGenreMappingString);
+        public int AddMovie(Movie movie, string MovieActorMappingString, string MovieGenreMappingString);
         public void UpdateMovie(int Id, Movie movie, string MovieActorMappingString, string MovieGenreMappingString);
         public void DeleteMovie(int Id);
-
+        public MovieResponse GetMovieByName(string name);
 
     }
 }

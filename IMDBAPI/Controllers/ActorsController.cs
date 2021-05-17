@@ -35,6 +35,15 @@ namespace IMDBAPI.Controllers
             return actor!= null ? Ok(actor) : NotFound();
         }
 
+
+
+        [HttpGet("Name")]
+        public async Task<IActionResult> GetActorByName(string name)
+        {
+            var actor = await Task.Run(() => _actorService.GetActorByName(name));
+            return actor != null ? Ok(actor) : NotFound();
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddActor([FromBody] ActorRequest actor)
         { 

@@ -1,9 +1,11 @@
+/Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/CoverletSourceRootsMapping
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/IMDBAPI.deps.json
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/IMDBAPI.runtimeconfig.json
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/IMDBAPI.runtimeconfig.dev.json
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/appsettings.Development.json
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/appsettings.json
+/Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/Microsoft.TestPlatform.PlatformAbstractions.dll
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/xunit.runner.reporters.netcoreapp10.dll
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/xunit.runner.utility.netcoreapp10.dll
@@ -25,7 +27,6 @@
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/Microsoft.Extensions.DependencyModel.dll
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/Microsoft.OpenApi.dll
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/Microsoft.TestPlatform.CoreUtilities.dll
-/Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/Microsoft.TestPlatform.PlatformAbstractions.dll
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/Microsoft.TestPlatform.CommunicationUtilities.dll
 /Users/ash/Documents/IMDBApplication/IMDB.Tests/bin/Debug/net5.0/Microsoft.TestPlatform.CrossPlatEngine.dll

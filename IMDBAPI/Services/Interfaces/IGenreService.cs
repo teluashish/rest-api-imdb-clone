@@ -12,6 +12,7 @@ namespace IMDBAPI.Services
         public void AddGenre(GenreRequest genre);
         public void UpdateGenre(int Id, GenreRequest genre);
         public void DeleteGenre(int Id);
+       
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 namespace IMDBAPI.Models.Database
 {
     public class Actor
@@ -8,5 +9,6 @@ namespace IMDBAPI.Models.Database
         public string Bio { get; set; }
         public DateTime Dob { get; set; }
         public string Gender { get; set; }
+
     }
 }

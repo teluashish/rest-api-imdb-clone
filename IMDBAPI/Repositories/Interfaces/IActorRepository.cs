@@ -11,6 +11,7 @@ namespace IMDBAPI.Repositories
         public void AddActor(Actor actor);
         public void UpdateActor(int Id, Actor actor);
         public void DeleteActor(int Id);
+        public Actor GetActorByName(string name);
 
     }
 }

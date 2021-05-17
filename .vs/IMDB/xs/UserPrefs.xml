@@ -1,35 +1,63 @@
-﻿<Properties StartupConfiguration="{AA5BB218-B44F-4C20-8AC8-7E5E494887FB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="IMDBTests/application.feature.cs">
+﻿<Properties StartupConfiguration="{A06D0283-4DE4-48C0-98EF-4B2C635D8627}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="IMDBAPI/Repositories/Implementation/MovieRepository.cs">
     <Files>
-      <File FileName="IMDBTests/application.cs" Line="1" Column="1" />
-      <File FileName="IMDBTests/application.feature.cs" Line="1" Column="1" />
+      <File FileName="IMDB.Tests/ActorFeature.feature" Line="17" Column="1" />
+      <File FileName="IMDB.Tests/BaseSteps.cs" />
+      <File FileName="IMDBAPI/Services/Implementation/ActorService.cs" />
+      <File FileName="IMDB.Tests/MockRepositories/ActorMock.cs" />
+      <File FileName="IMDB.Tests/ActorSteps.cs" />
+      <File FileName="IMDB.Tests/MockRepositories/MovieMock.cs" />
+      <File FileName="IMDBAPI/Repositories/Implementation/BaseRepository.cs" />
+      <File FileName="IMDBAPI/Repositories/Implementation/ActorRepository.cs" />
+      <File FileName="IMDBAPI/Controllers/ActorsController.cs" />
+      <File FileName="IMDBAPI/Program.cs" />
+      <File FileName="IMDBAPI/Startup.cs" />
+      <File FileName="IMDBAPI/Services/Implementation/GenreService.cs" />
+      <File FileName="IMDBAPI/Repositories/Implementation/GenreRepository.cs" />
+      <File FileName="IMDBAPI/Repositories/Implementation/ProducerRepository.cs" />
+      <File FileName="IMDBAPI/Controllers/MoviesController.cs" />
+      <File FileName="IMDBAPI/Services/Implementation/MovieService.cs" />
+      <File FileName="IMDBAPI/Repositories/Implementation/MovieRepository.cs" Line="104" Column="16" />
+      <File FileName="IMDBAPI/Models/Request/MovieRequest.cs" />
+      <File FileName="IMDBAPI/Models/Request/ActorRequest.cs" />
+      <File FileName="IMDBAPI/Models/Request/GenreRequest.cs" />
+      <File FileName="IMDBAPI/Models/Response/GenreResponse.cs" />
+      <File FileName="IMDBAPI/Models/Database/Movie.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="IMDB" expanded="True">
-            <Node name="IMDBTests" expanded="True">
-              <Node name="application.feature.cs" selected="True" />
+            <Node name="IMDB.Tests" expanded="True" />
+            <Node name="IMDBAPI" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Database" expanded="True" />
+                <Node name="Request" expanded="True" />
+                <Node name="Response" expanded="True" />
+              </Node>
+              <Node name="Repositories" expanded="True">
+                <Node name="Implementation" expanded="True">
+                  <Node name="MovieRepository.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Services" expanded="True">
+                <Node name="Implementation" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="IMDB" expanded="True" selected="True">
-            <Node name="IMDBTests" expanded="True">
-              <Node name="IMDBTests" expanded="True">
-                <Node name="IMDBFeature" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="IMDB" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.IMDBAPI PreferredExecutionTarget="/Applications/Brave Browser.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.IMDBApplication PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

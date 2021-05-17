@@ -19,7 +19,7 @@ namespace IMDBAPI.Services
 
         public void AddActor(ActorRequest actor)
         {
-            _actorRepository.AddActor(new Actor { Id = actor.Id, Bio = actor.Bio, Dob = actor.Dob, Gender = actor.Gender, Name = actor.Name });
+            _actorRepository.AddActor(new Actor { Bio = actor.Bio, Dob = actor.Dob, Gender = actor.Gender, Name = actor.Name });
         }
 
         public void DeleteActor(int Id)
@@ -30,7 +30,15 @@ namespace IMDBAPI.Services
         public ActorResponse GetActorById(int Id)
         {
             var actor = _actorRepository.GetActorById(Id);
-            return new ActorResponse { Id = actor.Id, Bio = actor.Bio, Dob = actor.Dob, Gender = actor.Gender, Name = actor.Name };
+
+            return actor != null ? new ActorResponse { Id = actor.Id, Bio = actor.Bio, Dob = actor.Dob, Gender = actor.Gender, Name = actor.Name } : null;
+        }
+
+        public ActorResponse GetActorByName(string name)
+        {
+            var actor = _actorRepository.GetActorByName(name);
+
+            return actor != null ? new ActorResponse { Id = actor.Id, Bio = actor.Bio, Dob = actor.Dob, Gender = actor.Gender, Name = actor.Name } : throw new NullReferenceException();
         }
 
         public IEnumerable<ActorResponse> GetAllActors()

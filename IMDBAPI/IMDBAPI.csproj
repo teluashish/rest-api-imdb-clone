@@ -19,5 +19,9 @@
     <Folder Include="Models\Response\" />
     <Folder Include="Repositories\" />
     <Folder Include="Services\" />
+    <Folder Include="Repositories\Interfaces\" />
+    <Folder Include="Repositories\Implementation\" />
+    <Folder Include="Services\Interfaces\" />
+    <Folder Include="Services\Implementation\" />
   </ItemGroup>
 </Project>

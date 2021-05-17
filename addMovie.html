@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="addMovie.js"></script>
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+ <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.min.js"></script>
+  <title>DeltaX Movie Database</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="index.html">DeltaX </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="actors.html">Actors</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="producers.html">Producers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="genres.html">Genres</a>
+                  </li>
+
+                </ul>
+              </div>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm">
+              <div class="actorModal">
+                  <div class="modal fade" id="actorModal" tabindex="-1" role="dialog"
+                      aria-labelledby="actorModalTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="actorModalLongTitle">Add Actor Details</h5>
+                              </div>
+                              <div class="modal-body">
+                                  <form id="add-actor" onsubmit="addActor()">
+                                      <div class="form-group">
+                                          <label for="actorName">Actor's Name</label>
+                                          <input type="text" class="form-control" id="actorName"
+                                              placeholder="Actor Name" name="name" required>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="actorGender">Actor's Gender</label>
+                                          <select class="form-control" id="actorGender" name="gender" required>
+                                              <option>Male</option>
+                                              <option>Female</option>
+                                          </select>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="actorDOB">Date of Birth:</label>
+                                          <input type="date" class="form-control" id="actorDOB" name="dob" required>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="actorBio">Actor's Bio</label>
+                                          <textarea class="form-control" id="actorBio" name="bio" rows="3" required></textarea>
+                                      </div>
+                                      <button class="btn btn-outline-success" type="submit">Submit</button>
+                                      <button type="button" class="btn btn-outline-danger" id="addActorClose"
+                                          data-dismiss="modal">Close</button>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="producerModal">
+  
+                  <div class="modal fade" id="producerModal" tabindex="-1" role="dialog"
+                      aria-labelledby="producerModalTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="producerModalLongTitle">Add Producer Details</h5>
+                              </div>
+                              <div class="modal-body">
+                                  <form id="add-producer" onsubmit="addProducer()">
+                                      <div class="form-group">
+                                          <label for="producerName">Producer's Name</label>
+                                          <input type="text" class="form-control" id="producerName"
+                                              placeholder="Producer Name" name="Name" required>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="producerGender">Producer's Gender</label>
+                                          <select class="form-control" id="producerGender" name="Sex" required>
+                                              <option>Male</option>
+                                              <option>Female</option>
+                                          </select>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="producerDOB">Date of Birth:</label>
+                                          <input type="date" class="form-control" id="producerDOB" name="DOB" required>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="producerBio">Producer's Bio</label>
+                                          <textarea class="form-control" id="producerBio" name="Bio"
+                                              rows="3" required></textarea>
+                                      </div>
+                                      <button class="btn btn-outline-success" type="submit"
+                                          >Submit</button>
+                                      <button type="button" class="btn btn-outline-danger" id="addProducerClose"
+                                          data-dismiss="modal">Close</button>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="genreModal">
+                  <div class="modal fade" id="genreModal" tabindex="-1" role="dialog"
+                      aria-labelledby="genreModalTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="genreModalLongTitle">Add Genre Details</h5>
+                              </div>
+                              <div class="modal-body">
+                                  <form id="add-genre"  onsubmit="addGenre()">
+                                      <div class="form-group">
+                                          <label for="genreName">Genre Name</label>
+                                          <input type="text" class="form-control" id="genreName" name="Name"
+                                              placeholder="Genre Name" required>
+                                      </div>
+                                      <button class="btn btn-outline-success" type="submit" >Submit</button>
+                                      <button type="button" class="btn btn-outline-danger"btn btn-secondary" id="addGenreClose"
+                                          data-dismiss="modal">Close</button>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card" style="width: 35rem;">
+                    <div class="card-body">
+
+                      <h4 class="card-title">+ Add Movie</h4>
+                      <h6 class="card-subtitle mb-2 text-muted">+ Genre</h6><br><br>
+                      <form id="add-movie" onsubmit="addMovie()">
+                        <div class="form-group">
+                          <label for="movieName">Enter Movie Name</label>
+                          <input type="text" class="form-control" id="movieName" placeholder="Eg: Game of Thrones" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="movieRelease">Enter Release Date</label>
+                          <input type="date" class="form-control" id="movieRelease" required>
+                        </div>
+                        <div class="mb-3">
+
+
+                            <label for="moviePlot">Enter Plot</label>
+                            <textarea class="form-control" id="moviePlot" placeholder="Eg:  It is an adaptation of A Song of Ice and Fire, a series of fantasy novels by George R. R. Martin, the first of which is A Game of Thrones." required></textarea>
+                            <div class="invalid-feedback">
+                              Please enter a message in the textarea.
+                            </div>
+                          </div>
+                          <div class="input-group mb-3">
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input movieImage" id="inputGroupFile02">
+                              <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Cover Image</label>
+                            </div>
+                            <div class="input-group-append">
+                              <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                            </div>
+                          </div>
+
+                          <!-- <div class="btn-group" >
+                            <button type="button" class="btn btn-secondary" id="producerName">+ Producer</button>
+                            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-expanded="false" data-reference="parent">
+                              <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuReference" id="producerOptions">
+                             
+                            
+                            </div>
+
+                          </div> -->
+                          <div class="form-group">
+                            <div class="form-row" style="padding: 5px;display: inline-block;">
+                                <select class="form-control col-lg-9" name="producer" id="editProducer" required>
+                                    <option value="_">Producer</option>
+                                </select>
+                            </div>
+                                <button type="button" class="btn btn-outline-primary col-sm-3" data-toggle="modal"
+                                    data-target="#producerModal">+Add Producer</button>
+                            
+                        </div>
+                          <div class="form-group" >
+                            <label for="actors">Actors</label>
+                            <div class="form-row" style="padding:5px;">
+                                <select class="multiple-select form-control col-sm-10" name="actors" id="editActors"
+                                    multiple="multiple" required>
+                                   
+                                </select>
+                                <button type="button" class="btn btn-outline-primary col-sm-2" data-toggle="modal"
+                                    data-target="#actorModal">+Add Actor</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="genres">Genres</label>
+                            <div class="form-row" style="padding: 5px;">
+                                <select class="multiple-select form-control col-sm-10" name="genres" id="editGenres"
+                                    multiple="multiple" required>
+                                    <!-- <option value=""></option> -->
+                                </select>
+                                <button type="button" class="btn btn-outline-primary col-sm-2" data-toggle="modal"
+                                    data-target="#genreModal">+Add Genre</button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+
+
+                        
+
+
+                      </form>
+                    </div>
+                  </div>
+
+            </div>
+            <!-- <div class="row">
+              <div class="col-lg-12">
+                <select class="form-control genreSelect" name="genres" multiple="multiple" id="genreOptions"  required>
+               
+                </select>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-lg-12">
+                <select class="form-control actorSelect" name="actors" multiple="multiple" id="actorOptions"  required>
+               
+                </select>
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12">
+                <select class="form-control producerSelect" name="producers" multiple="multiple"  id="producerOptions"  required>
+               
+                </select>
+                </div>
+            </div> -->
+
+
+        </div>
+    
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+      <script>
+          $(document).ready(function () {
+              $('.actorSelect').select2();
+              $('.genreSelect').select2();
+              $('.producerSelect').select2();
+
+          });
+
+          $('form').submit((event) => {
+              event.preventDefault();
+          });
+
+
+        
+
+
+
+      </script>
+
+
+  
+</body>
+</html>

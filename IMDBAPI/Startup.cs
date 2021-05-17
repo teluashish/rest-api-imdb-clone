@@ -24,10 +24,22 @@ namespace IMDBAPI
         }
 
         public IConfiguration Configuration { get; }
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("http://locahost:64536", "http://127.0.0.1:64536").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin(); ;
+                                  });
+            });
+
             services.Configure<ConnectionString>(Configuration.GetSection("ConnectionString"));
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -62,6 +74,8 @@ namespace IMDBAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthorization();
 

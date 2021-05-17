@@ -36,11 +36,18 @@ namespace IMDBAPI.Controllers
             return movie != null ? Ok(movie) : NotFound();
         }
 
+        [HttpGet("Name")]
+        public async Task<IActionResult> GetMovieByName(string name)
+        {
+            var movie = await Task.Run(() => _movieService.GetMovieByName(name));
+            return movie != null ? Ok(movie) : NotFound();
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddMovie([FromBody] MovieRequest movie)
         {
-            await Task.Run(() => _movieService.AddMovie(movie));
-            return StatusCode(StatusCodes.Status201Created);
+
+            return (await Task.Run(() => _movieService.AddMovie(movie))) != -1 ? StatusCode(StatusCodes.Status201Created) : BadRequest();
         }
 
         [HttpPut("{Id}")]
