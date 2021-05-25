@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('#navigation').load('navigation.html');
+      $('#modals').load('modals.html');
+      $('#deps').load('deps.html');
+    });
+  </script>
+  <script src="actors.js"></script>
+  <script src="producers.js"></script>
+  <script src="genres.js"></script>
+  <script src="movies.js"></script>
+  <link rel="stylesheet" href="movies.css" />
+  <div id="deps"></div>
+  <title>DeltaX Movie Database</title>
+</head>
+<body>
+    <div class="container-fluid">
+      <div id="navigation"></div> 
+      <div id="modals"></div>
+  
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+
+                      <h4 class="card-title">Add Movie</h4><br><br>
+                      <form id="add-movie" onsubmit="addMovie()">
+                        <div class="form-group">
+                          <label for="movieName">Enter Movie Name</label>
+                          <input type="text" class="form-control" id="movieName" placeholder="Eg: Game of Thrones" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="movieRelease">Enter Release Date</label>
+                          <input type="number" min="0" class="form-control" id="movieRelease" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="moviePlot">Enter Plot</label>
+                            <textarea class="form-control" id="moviePlot" placeholder="Eg:  It is an adaptation of A Song of Ice and Fire, a series of fantasy novels by George R. R. Martin, the first of which is A Game of Thrones." required></textarea>
+                            <div class="invalid-feedback">
+                              Please enter a Plot.
+                            </div>
+                          </div>
+                          <div class="input-group mb-3">
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="movieImageUpload">
+                              <label class="custom-file-label">Cover Image</label>
+                            </div>
+
+                          </div>
+
+                          <div class="form-group">
+                            <div class="form-row">
+                                <select class="form-control col-lg-9 producerSelect" name="producers" id="editProducer" required>
+                                  <option value="" selected data-default>select producer</option>
+                                </select>
+                            </div>
+                                <button type="button" class="btn btn-outline-primary col-sm-3" data-toggle="modal"
+                                    data-target="#producerModal">+Add Producer</button>
+                            
+                        </div>
+                          <div class="form-group" >
+                            <label for="actors">Actors</label>
+                            <div class="form-row">
+                                <select multiple class="multiple-select form-control col-sm-10 actorSelect" name="actors" id="editActors"
+                                     required>
+                                   
+                                </select>
+                                <button type="button" class="btn btn-outline-primary col-sm-2" data-toggle="modal"
+                                    data-target="#actorModal">+Add Actor</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="genres">Genres</label>
+                            <div class="form-row">
+                                <select class="multiple-select form-control col-sm-10 genreSelect" name="genres" id="editGenres"
+                                    multiple="multiple" required>
+                                </select>
+                                <button type="button" class="btn btn-outline-primary col-sm-2" data-toggle="modal"
+                                    data-target="#genreModal">+Add Genre</button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+
+
+                        
+
+
+                      </form>
+                    </div>
+                  </div>
+
+            </div>
+
+        </div>
+    
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+      <script>
+        
+          var firebaseConfig = {
+            apiKey: "AIzaSyBfq9ELHwliZq_TBaAHjfGCmeweZQuoa0g",
+            authDomain: "moviedb-260b6.firebaseapp.com",
+            projectId: "moviedb-260b6",
+            storageBucket: "moviedb-260b6.appspot.com",
+            messagingSenderId: "292064391387",
+            appId: "1:292064391387:web:b094e2ffd5c0882e1b9cfe"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          console.log(firebase);
+          $(document).ready(function () {
+              $('.actorSelect').select2();
+              $('.genreSelect').select2();
+              $('.producerSelect').select2();
+
+          });
+
+          $('form').submit((event) => {
+              event.preventDefault();
+          });
+
+
+      
+
+
+      </script>
+
+
+  
+</body>
+</html>

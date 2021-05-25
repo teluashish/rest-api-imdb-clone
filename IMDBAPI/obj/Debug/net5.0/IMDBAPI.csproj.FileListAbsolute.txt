@@ -33,3 +33,5 @@
 /Users/ash/Documents/IMDBApplication/IMDBAPI/obj/Debug/net5.0/IMDBAPI.pdb
 /Users/ash/Documents/IMDBApplication/IMDBAPI/obj/Debug/net5.0/IMDBAPI.genruntimeconfig.cache
 /Users/ash/Documents/IMDBApplication/IMDBAPI/obj/Debug/net5.0/IMDBAPI.csprojAssemblyReference.cache
+/Users/ash/Documents/IMDBApplication/IMDBAPI/bin/Debug/net5.0/Firebase.Storage.dll
+/Users/ash/Documents/IMDBApplication/IMDBAPI/bin/Debug/net5.0/Newtonsoft.Json.dll

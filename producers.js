@@ -1,84 +1,86 @@
-
 $(document).ready(function () {
     $.ajax({ url: "https://localhost:64536/producers", type: "GET", success: getProducers, error: producerError });
+    $('form').submit((event) => {
+        event.preventDefault();
+    });
 });
+
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-var allProducers;
-function getProducers(producers) {
-    allProducers = producers;
+const getProducers = (producers) => {
     $('#producerCards').empty();
     producers.forEach(producer => {
         let date = new Date(producer.dob);
         let dateOfBirth = months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
-        let producerCardsHTML = `<div class="col-lg-3" id = ${producer.id}>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">${producer.name}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${producer.gender}</h6><br>
-            <p>${dateOfBirth}</p>
-            <p class="card-text">${producer.bio}</p>
-            <button class="btn btn-outline-warning my-2 my-sm-0" onclick = fillProducer(${producer.id}) id = "${producer.id}" data-toggle="modal" data-target="#producerModal" >edit</button>
-            <button class="btn btn-outline-danger my-2 my-sm-0" onclick = deleteProducer(${producer.id}) id = "${producer.id}">delete</button>
+        let producerCard = 
+        `<div class="col mb-4" id = ${producer.id}>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${producer.name}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">${producer.gender}</h6><br>
+                    <p>${dateOfBirth}</p>
+                    <p class="card-text">${producer.bio}</p>
 
-          </div>
-        </div>
-      </div>
-
-        </div>
-    </div>`;
-        $(".producerCards").append(producerCardsHTML);
+                    <button class="btn btn-outline-warning my-2 my-sm-0" onclick = fillProducer(${producer.id}) id = "${producer.id}" data-toggle="modal" data-target="#producerModal">edit</button>
+                    <button class="btn btn-outline-danger my-2 my-sm-0" onclick = deleteProducer(${producer.id}) id = "${producer.id}">delete</button>
+                </div>
+            </div>
+        </div>`;
+        $(".producerCards").append(producerCard);
     });
 }
 
+const producerError = (error) => window.alert(error);
 
 const deleteProducer = (id) => {
-    const url = "https://localhost:64536/producers/" + id
     $.ajax({
-        url: url,
+        url: "https://localhost:64536/producers/" + id,
         type: "DELETE",
         success: function (data) {
-            $.ajax({ url: "https://localhost:64536/producers/"+id, type: "DELETE", success: getActors, error: producerError })
+            window.alert('producer deleted successfully');   //data = id // tom
             location.href="producers.html";
         },
-        error: function (err) {
-            window.alert(err.responseText)
-        }
+        error: error =>  window.alert(error.responseText)
     });
 }
 
-function producerError(error)
-{
-    console.log(error);
+
+export const getProducerById = (id) => {
+    producer = null
+    $.ajax({
+        url: "https://localhost:64536/producers/" + id,
+        type: "GET",
+        success: (data) => {
+            producer = data
+        },
+        error: error =>  window.alert(error.responseText)
+    });
+    return producer;
 }
 
-function fillProducer(id){
+
+const fillProducer = (id) => {
     localStorage.setItem('producerId',id);
-    for(i=0;i<allProducers.length;i++){
-        if(allProducers[i].id===id){
-            idx=i;
-            break;
-        }
-    }
-    response = allProducers[idx];
-    console.log(response);
-    $("#producerName").val(response.name);
-    $("#producerDOB").val(response.dob);
-    $("#producerGender").val(response.gender);
-    $("#producerBio").val(response.bio);
-    $("#editProducerSubmit").attr("onclick",editProducer());
+    $.ajax({
+        url: "https://localhost:64536/producers/" + id,
+        type: "GET",
+        success: function (producer) {
+            $("#producerName").val(producer.name);
+            $("#producerDOB").val(producer.dob);
+            $("#producerGender").val(producer.gender);
+            $("#producerBio").val(producer.bio);
+            $("#producerSubmitEdit").attr("onclick",editProducer());
+        },
+        error: error =>  window.alert(error.responseText)
+    });
 
 }
 
 
 
-
-
-function editProducer()
-{
-  
+const editProducer = () => {
     var id = localStorage.getItem('producerId');
-    let putData=JSON.stringify({
+    let producerData=JSON.stringify({
         "name":$("#producerName").val(),
         "dob":(new Date($('#producerDOB').val())),
         "gender":$("#producerGender").val(),
@@ -89,14 +91,40 @@ function editProducer()
     $.ajax({
         url:"https://localhost:64536/producers/"+id,
         type:"PUT",
-        data:putData,
+        data:producerData,
         contentType:"application/json; charset=utf-8",
         success:function(response){
-            alert("Movie updated successfully.");
+            window.alert("Producer updated successfully.");
             location.href="producers.html";
         },
-        error:function(error){
-            console.log(error);
-        }
+        error: error =>  window.alert(error.responseText)
     });
 }
+
+
+
+const addProducer = () =>  {
+    var producer = JSON.stringify(
+        {
+            "name": $("#producerName").val(),
+            "gender": $("#producerGender").val(),
+            "dob": $("#producerDOB").val(),
+            "bio": $("#producerBio").val()
+        });
+
+    $.ajax({
+        url: "https://localhost:64536/producers",
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        data: producer,
+        success: function () {
+            window.alert("Producer added successfully.");
+            $('#addProducerClose').trigger("click");
+            location.href="producers.html";
+        },
+        error: error =>  window.alert(error.responseText),
+        async: false
+    });
+}
+
+

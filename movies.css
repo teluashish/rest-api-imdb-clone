@@ -1,0 +1,28 @@
+.card{
+    width: 100%;
+}
+
+.form-row{
+    padding: 5px;
+    display: inline-block;
+    width:40%;
+}
+
+
+#editProducer{
+    display: inline;
+    position:relative;
+    width:50%;
+}
+
+#editActors{
+    display: inline;
+    position:relative;
+    width:50%;
+}
+
+#editGenres{
+    display: inline;
+    position:relative;
+    width:50%;
+}

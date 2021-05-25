@@ -6,7 +6,9 @@ using IMDBAPI.Models.Request;
 using IMDBAPI.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-//using Firebase.Storage;
+using Firebase.Storage;
+
+
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -66,17 +68,19 @@ namespace IMDBAPI.Controllers
         }
 
 
-        //[HttpPost("upload")]
-        //public async Task<IActionResult> UploadFile(IFormFile file)
-        //{
-        //    if (file == null || file.Length == 0)
-        //        return Content("file not selected");
-        //    var task = await new FirebaseStorage("YOUR_ACCOUNT_KEY")
-        //            .Child("DIRECTORY_IF_ANY")
-        //            .Child(Guid.NewGuid().ToString() + ".jpg")
-        //            .PutAsync(file.OpenReadStream());
-        //    return Ok(task);
-        //}
+        [HttpPost("upload")]
+        public async Task<IActionResult> UploadFile(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return Content("file not selected");
+
+            }
+            var task = await new FirebaseStorage("moviedb-260b6.appspot.com")
+                    .Child(Guid.NewGuid().ToString() + ".jpg")
+                    .PutAsync(file.OpenReadStream());
+            return Ok(task);
+        }
 
 
 

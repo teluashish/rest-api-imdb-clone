@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "958K4S6GSHxydShIwPuSMqjbdu24cr8ZxAEA5I0ReuAg/s0m5zOPKXYNxqfW+SxeDCcnT8iqA+gYpznystQUSw==",
+  "dgSpecHash": "OlWWGwX4bXiJLV5aYrhLkuD5fK055w/K8eitwzKl9HwRvhtmX66R/dWssQEiL8mOqiAvvJz+qGfwlvbJugMLjg==",
   "success": true,
   "projectFilePath": "/Users/ash/Documents/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "/Users/ash/.nuget/packages/coverlet.collector/3.0.3/coverlet.collector.3.0.3.nupkg.sha512",
     "/Users/ash/.nuget/packages/cucumber.messages/6.0.1/cucumber.messages.6.0.1.nupkg.sha512",
     "/Users/ash/.nuget/packages/dapper/2.0.78/dapper.2.0.78.nupkg.sha512",
+    "/Users/ash/.nuget/packages/firebasestorage.net/1.0.3/firebasestorage.net.1.0.3.nupkg.sha512",
     "/Users/ash/.nuget/packages/gherkin/6.0.0/gherkin.6.0.0.nupkg.sha512",
     "/Users/ash/.nuget/packages/google.protobuf/3.7.0/google.protobuf.3.7.0.nupkg.sha512",
     "/Users/ash/.nuget/packages/microsoft.aspnetcore.mvc.testing/5.0.5/microsoft.aspnetcore.mvc.testing.5.0.5.nupkg.sha512",
