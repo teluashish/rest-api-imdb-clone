@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ash/Documents/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj": {}
+    "/Users/ash/Desktop/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj": {}
   },
   "projects": {
-    "/Users/ash/Documents/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj": {
+    "/Users/ash/Desktop/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ash/Documents/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj",
+        "projectUniqueName": "/Users/ash/Desktop/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj",
         "projectName": "IMDB.Tests",
-        "projectPath": "/Users/ash/Documents/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj",
+        "projectPath": "/Users/ash/Desktop/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj",
         "packagesPath": "/Users/ash/.nuget/packages/",
-        "outputPath": "/Users/ash/Documents/IMDBApplication/IMDB.Tests/obj/",
+        "outputPath": "/Users/ash/Desktop/IMDBApplication/IMDB.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ash/.config/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/ash/Documents/IMDBApplication/IMDBAPI/IMDBAPI.csproj": {
-                "projectPath": "/Users/ash/Documents/IMDBApplication/IMDBAPI/IMDBAPI.csproj"
+              "/Users/ash/Desktop/IMDBApplication/IMDBAPI/IMDBAPI.csproj": {
+                "projectPath": "/Users/ash/Desktop/IMDBApplication/IMDBAPI/IMDBAPI.csproj"
               }
             }
           }
@@ -44,37 +44,25 @@
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.Testing": {
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.7, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.9.4, )"
+              "version": "[16.10.0, )"
             },
             "Moq": {
               "target": "Package",
               "version": "[4.16.1, )"
             },
-            "SpecFlow": {
-              "target": "Package",
-              "version": "[3.7.38, )"
-            },
-            "SpecFlow.Tools.MsBuild.Generation": {
-              "target": "Package",
-              "version": "[3.7.38, )"
-            },
             "SpecFlow.xUnit": {
               "target": "Package",
-              "version": "[3.7.38, )"
+              "version": "[3.9.8, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.0.3, )"
-            },
-            "gherkin": {
-              "target": "Package",
-              "version": "[6.0.0, )"
             },
             "xunit": {
               "target": "Package",
@@ -109,14 +97,14 @@
         }
       }
     },
-    "/Users/ash/Documents/IMDBApplication/IMDBAPI/IMDBAPI.csproj": {
+    "/Users/ash/Desktop/IMDBApplication/IMDBAPI/IMDBAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ash/Documents/IMDBApplication/IMDBAPI/IMDBAPI.csproj",
+        "projectUniqueName": "/Users/ash/Desktop/IMDBApplication/IMDBAPI/IMDBAPI.csproj",
         "projectName": "IMDBAPI",
-        "projectPath": "/Users/ash/Documents/IMDBApplication/IMDBAPI/IMDBAPI.csproj",
+        "projectPath": "/Users/ash/Desktop/IMDBApplication/IMDBAPI/IMDBAPI.csproj",
         "packagesPath": "/Users/ash/.nuget/packages/",
-        "outputPath": "/Users/ash/Documents/IMDBApplication/IMDBAPI/obj/",
+        "outputPath": "/Users/ash/Desktop/IMDBApplication/IMDBAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ash/.config/NuGet/NuGet.Config"

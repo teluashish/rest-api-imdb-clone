@@ -8,6 +8,6 @@ namespace IMDBAPI.Repositories
         public IEnumerable<TClass> GetAll(string query);
         public TClass GetSingle(string query);
         public void Delete(int ID, string query);
-        public void ExecuteProcedure(string procedureName, TClass ob);
+        public int ExecuteProcedure(string procedureName, TClass ob);
     }
 }

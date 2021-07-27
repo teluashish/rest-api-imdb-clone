@@ -36,11 +36,12 @@ namespace IMDBAPI.Repositories
             connection.Execute(query, new { ID });
         }
 
-        public void ExecuteProcedure(string procedureName, TClass ob)
+        public int ExecuteProcedure(string procedureName, TClass ob)
         {
             using var connection = new SqlConnection(_connectionString.DB);
-            connection.Execute(procedureName, ob, commandType: CommandType.StoredProcedure);
+            return connection.Execute(procedureName, ob, commandType: CommandType.StoredProcedure);
         }
+
 
 
     }

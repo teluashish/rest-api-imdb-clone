@@ -38,8 +38,8 @@ namespace IMDBAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddProducer([FromBody] ProducerRequest producer)
         {
-            await Task.Run(() => _producerService.AddProducer(producer));
-            return StatusCode(StatusCodes.Status201Created);
+            var id = await Task.Run(() => _producerService.AddProducer(producer));
+            return Ok(id);
         }
 
         [HttpPut("{Id}")]

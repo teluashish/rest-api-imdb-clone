@@ -47,8 +47,8 @@ namespace IMDBAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddActor([FromBody] ActorRequest actor)
         { 
-             await Task.Run(()=> _actorService.AddActor(actor));
-             return StatusCode(StatusCodes.Status201Created); 
+             var id = await Task.Run(()=> _actorService.AddActor(actor));
+            return Ok(id);
         }
 
         [HttpPut("{Id}")]

@@ -7,7 +7,7 @@ using global::System.Runtime.CompilerServices;
 [assembly: global::Xunit.TestFramework("TechTalk.SpecFlow.xUnit.SpecFlowPlugin.XunitTestFrameworkWithAssemblyFixture", "TechTalk.SpecFlow.xUnit.SpecFlowPlugin")]
 [assembly: global::TechTalk.SpecFlow.xUnit.SpecFlowPlugin.AssemblyFixture(typeof(global::IMDB_Tests_XUnitAssemblyFixture))]
 
-[GeneratedCode("SpecFlow", "3.7.38")]
+[GeneratedCode("SpecFlow", "3.9.8")]
 public class IMDB_Tests_XUnitAssemblyFixture : global::System.IDisposable
 {
     private readonly global::System.Reflection.Assembly _currentAssembly;
@@ -24,5 +24,10 @@ public class IMDB_Tests_XUnitAssemblyFixture : global::System.IDisposable
     {
         global::TechTalk.SpecFlow.TestRunnerManager.OnTestRunEnd(_currentAssembly);
     }
+}
+
+[global::Xunit.CollectionDefinition("SpecFlowNonParallelizableFeatures", DisableParallelization = true)]
+public class IMDB_Tests_SpecFlowNonParallelizableFeaturesCollectionDefinition
+{
 }
 #pragma warning restore

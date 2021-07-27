@@ -17,9 +17,9 @@ namespace IMDBAPI.Services
             _actorRepository = actorRepository;
         }
 
-        public void AddActor(ActorRequest actor)
+        public int AddActor(ActorRequest actor)
         {
-            _actorRepository.AddActor(new Actor { Bio = actor.Bio, Dob = actor.Dob, Gender = actor.Gender, Name = actor.Name });
+            return _actorRepository.AddActor(new Actor { Bio = actor.Bio, Dob = actor.Dob, Gender = actor.Gender, Name = actor.Name });
         }
 
         public void DeleteActor(int Id)

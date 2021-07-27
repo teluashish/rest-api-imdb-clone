@@ -11,7 +11,7 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("IMDBAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "/Users/ash/Documents/IMDBApplication/IMDBAPI", "IMDBAPI.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("IMDBAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "/Users/ash/Desktop/IMDBApplication/IMDBAPI", "IMDBAPI.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("IMDB.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

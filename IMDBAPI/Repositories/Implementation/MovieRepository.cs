@@ -100,15 +100,12 @@ namespace IMDBAPI.Repositories
 
         public int AddMovie(Movie movie, string MovieActorMappingString,string MovieGenreMappingString)
         {
-            //try
-            //{
+
                 using var connection = new SqlConnection(_connectionString.DB);
                 var ActorIds = MovieActorMappingString;
                 var GenreIds = MovieGenreMappingString;
                 return connection.Execute("Insert_Movie", new { movie.Id, movie.Name, movie.Year, movie.Plot, movie.ProducerId, ActorIds, GenreIds, movie.CoverImage }, commandType: CommandType.StoredProcedure);
-            //}
-            //catch (SqlException) { }
-            //return -1;
+
         }
 
         public void UpdateMovie(int ID, Movie movie,  string MovieActorMappingString, string MovieGenreMappingString)

@@ -20,8 +20,9 @@ namespace IMDB.Tests
         {
 
         }
-        [BeforeFeature]
-        public static void MockRepositories()
+
+        [BeforeScenario]
+        public void MockRepositories()
         {
             ActorMock.MockInitialize();
         }

@@ -17,12 +17,22 @@ CREATE TABLE MovieGenreMapping(MovieId int, GenreId int,FOREIGN KEY (GenreID) RE
 
 Drop Procedure IF EXISTS dbo.Insert_Actor
 GO
-CREATE PROCEDURE Insert_Actor @Id int, @Name NVARCHAR(100), @Bio NVARCHAR(100), @Dob DATE, @Gender NVARCHAR(50) 
-AS
+CREATE PROCEDURE Insert_Actor (@Id int, @Name NVARCHAR(100), @Bio NVARCHAR(100), @Dob DATE, @Gender NVARCHAR(50), @Max_ID INT OUTPUT)
+AS  
+
     INSERT INTO Actors VALUES(@Name,@Bio,@Dob,@Gender) 
 
+        SET @Max_ID =(
+        SELECT max(Id) as id
+        FROM Actors)
 GO
 
+DECLARE @date DATE
+SET @date = (SELECT GETDATE())
+
+DECLARE  @return_status int  
+EXEC Insert_Actor @Id = 0,@Name = "Ashiszh" ,@Bio="helloooooooooooo" ,@Dob = @date,@Gender="Male",@Max_ID=@return_status OUTPUT
+SELECT @return_status;  
 
 
 
@@ -37,10 +47,15 @@ GO
 
 Drop Procedure IF EXISTS dbo.Insert_Producer
 GO
-CREATE PROCEDURE Insert_Producer @Id int, @Name NVARCHAR(100), @Bio NVARCHAR(100), @Dob DATE, @Gender NVARCHAR(50) 
+CREATE PROCEDURE Insert_Producer (@Id int, @Name NVARCHAR(100), @Bio NVARCHAR(100), @Dob DATE, @Gender NVARCHAR(50),@Max_ID int OUTPUT )
 AS
     INSERT INTO Producers VALUES(@Name,@Bio,@Dob,@Gender)    
+        SET @Max_ID =(
+        SELECT max(Id) as id
+        FROM Producers)
 GO
+
+select * from producers
 
 Drop Procedure IF EXISTS dbo.Update_Producer
 GO

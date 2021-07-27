@@ -17,9 +17,9 @@ namespace IMDBAPI.Services
             _producerRepository = producerRepository;
         }
 
-        public void AddProducer(ProducerRequest producer)
+        public int AddProducer(ProducerRequest producer)
         {
-            _producerRepository.AddProducer(new Producer { Id = producer.Id, Bio = producer.Bio, Dob = producer.Dob, Gender = producer.Gender, Name = producer.Name });
+           return _producerRepository.AddProducer(new Producer { Id = producer.Id, Bio = producer.Bio, Dob = producer.Dob, Gender = producer.Gender, Name = producer.Name });
         }
 
         public void DeleteProducer(int Id)

@@ -9,11 +9,7 @@ Scenario: Get genre by Id
 	Then response data must look like this '{"id":2,"name":"Drama"}'
 	And the response status code is 200
 
-# Scenario: Get non-existing genre
-# 	Given I am Client
-# 	When I make GET Request '/genres/10'
-# 	Then response data must look like this ''
-# 	And the response status code is 404
+
 
 Scenario: Get all genres
 	Given I am Client
@@ -21,11 +17,7 @@ Scenario: Get all genres
 	Then response data must look like this '[{"id":1,"name":"Thriller"},{"id":2,"name":"Drama"}]'
 	And the response status code is 200
 
-# Scenario: Get all non-existing genres 
-# 	Given I am Client
-# 	When I make GET Request '/genres'
-# 	Then response data must look like this '[]'
-# 	And the response status code is 404
+
 
 
 Scenario: Adding Genre with valid data
@@ -41,11 +33,6 @@ Scenario: Updating Genre with valid data
 	When I make PUT Request to endpoint '/genres/2' with body message '{"name":"Thriller"}'
 	Then the response status code is 200
 
-# Scenario: Updating a non-existing Genre
-# 	Given I am Client
-# 	When I make PUT Request to endpoint '/genres/10' with body message '{"name":"Drama"}'
-# 	Then the response status code is 404
-
 
 
 
@@ -54,8 +41,4 @@ Scenario: Deleting Genre with valid data
 	When I make DELETE Request '/genres/1' 
 	Then the response status code is 200
 
-# Scenario: Deleting a non-existing Genre
-# 	Given I am Client
-# 	When I make DELETE Request '/genres/10'
-# 	Then the response status code is 404
 

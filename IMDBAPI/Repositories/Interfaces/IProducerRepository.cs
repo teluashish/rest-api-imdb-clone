@@ -8,7 +8,7 @@ namespace IMDBAPI.Repositories
     {
         public IEnumerable<Producer> GetAllProducers();
         public Producer GetProducerById(int Id);
-        public void AddProducer(Producer producer);
+        public int AddProducer(Producer producer);
         public void UpdateProducer(int Id, Producer producer);
         public void DeleteProducer(int Id);
 

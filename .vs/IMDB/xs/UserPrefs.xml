@@ -1,13 +1,12 @@
 ﻿<Properties StartupConfiguration="{A06D0283-4DE4-48C0-98EF-4B2C635D8627}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="IMDBAPI/Repositories/Implementation/MovieRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="IMDBAPI/Repositories/Implementation/BaseRepository.cs">
     <Files>
       <File FileName="IMDB.Tests/ActorFeature.feature" Line="17" Column="1" />
       <File FileName="IMDB.Tests/BaseSteps.cs" />
       <File FileName="IMDBAPI/Services/Implementation/ActorService.cs" />
       <File FileName="IMDB.Tests/MockRepositories/ActorMock.cs" />
       <File FileName="IMDB.Tests/ActorSteps.cs" />
-      <File FileName="IMDB.Tests/MockRepositories/MovieMock.cs" />
-      <File FileName="IMDBAPI/Repositories/Implementation/BaseRepository.cs" />
+      <File FileName="IMDBAPI/Repositories/Implementation/BaseRepository.cs" Line="36" Column="1" />
       <File FileName="IMDBAPI/Repositories/Implementation/ActorRepository.cs" />
       <File FileName="IMDBAPI/Controllers/ActorsController.cs" />
       <File FileName="IMDBAPI/Program.cs" />
@@ -17,18 +16,32 @@
       <File FileName="IMDBAPI/Repositories/Implementation/ProducerRepository.cs" />
       <File FileName="IMDBAPI/Controllers/MoviesController.cs" />
       <File FileName="IMDBAPI/Services/Implementation/MovieService.cs" />
-      <File FileName="IMDBAPI/Repositories/Implementation/MovieRepository.cs" Line="104" Column="16" />
+      <File FileName="IMDBAPI/Repositories/Implementation/MovieRepository.cs" />
       <File FileName="IMDBAPI/Models/Request/MovieRequest.cs" />
       <File FileName="IMDBAPI/Models/Request/ActorRequest.cs" />
       <File FileName="IMDBAPI/Models/Request/GenreRequest.cs" />
       <File FileName="IMDBAPI/Models/Response/GenreResponse.cs" />
       <File FileName="IMDBAPI/Models/Database/Movie.cs" />
+      <File FileName="IMDBAPI/Repositories/Interfaces/IBaseRepository.cs" />
+      <File FileName="IMDBAPI/Repositories/Interfaces/IActorRepository.cs" />
+      <File FileName="IMDBAPI/Services/Interfaces/IActorService.cs" />
+      <File FileName="IMDBAPI/Models/Response/ActorResponse.cs" />
+      <File FileName="IMDBAPI/Models/Database/Actor.cs" />
+      <File FileName="IMDBAPI/Services/Interfaces/IProducerService.cs" />
+      <File FileName="IMDBAPI/Repositories/Interfaces/IProducerRepository.cs" />
+      <File FileName="IMDBAPI/Services/Implementation/ProducerService.cs" />
+      <File FileName="IMDBAPI/Controllers/ProducersController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="IMDB" expanded="True">
-            <Node name="IMDB.Tests" expanded="True" />
+            <Node name="IMDB.Tests" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="MockRepositories" expanded="True" />
+            </Node>
             <Node name="IMDBAPI" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True">
@@ -38,11 +51,13 @@
               </Node>
               <Node name="Repositories" expanded="True">
                 <Node name="Implementation" expanded="True">
-                  <Node name="MovieRepository.cs" selected="True" />
+                  <Node name="BaseRepository.cs" selected="True" />
                 </Node>
+                <Node name="Interfaces" expanded="True" />
               </Node>
               <Node name="Services" expanded="True">
                 <Node name="Implementation" expanded="True" />
+                <Node name="Interfaces" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -55,7 +70,9 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../IMDBAPI/Services/Implementation/ProducerService.cs" line="19" column="31" endLine="19" endColumn="55" offsetX="-1" offsetY="-1" expression="producer" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.IMDBAPI PreferredExecutionTarget="/Applications/Brave Browser.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -27,8 +27,35 @@ namespace IMDBAPI.Repositories
                                                                 FROM Actors A
                                                                 WHERE A.Name = " + "'" +name +"'" + ";");
 
-        public void AddActor(Actor actor) =>
-            ExecuteProcedure("Insert_Actor", new Actor() { Id = 0, Name = actor.Name, Bio = actor.Bio, Dob = actor.Dob, Gender = actor.Gender });
+        public int AddActor(Actor actor)
+        {
+            int id;
+            using (SqlConnection connection = new SqlConnection(_connectionString.DB))
+            using (SqlCommand cmd = new SqlCommand("dbo.Insert_Actor", connection))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@Id", SqlDbType.Int);
+                cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 100);
+                cmd.Parameters.Add("@Bio", SqlDbType.NVarChar, 100);
+                cmd.Parameters.Add("@Dob", SqlDbType.Date);
+                cmd.Parameters.Add("@Gender", SqlDbType.NVarChar, 50);
+                cmd.Parameters.Add("@Max_ID", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+
+                cmd.Parameters["@Id"].Value = actor.Id;
+                cmd.Parameters["@Name"].Value = actor.Name;
+                cmd.Parameters["@Bio"].Value = actor.Bio;
+                cmd.Parameters["@Dob"].Value = actor.Dob;
+                cmd.Parameters["@Gender"].Value = actor.Gender;
+
+                connection.Open();
+                cmd.ExecuteNonQuery();
+
+                id = Convert.ToInt32(cmd.Parameters["@Max_ID"].Value);
+      
+            }
+            return id;
+        }
 
         public void UpdateActor(int ID, Actor actor) =>
             ExecuteProcedure("Update_Actor", new Actor() { Id = actor.Id, Name = actor.Name, Bio = actor.Bio, Dob = actor.Dob, Gender = actor.Gender });

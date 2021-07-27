@@ -9,7 +9,7 @@ namespace IMDBAPI.Services
     {
         public IEnumerable<ProducerResponse> GetAllProducers();
         public ProducerResponse GetProducerById(int Id);
-        public void AddProducer(ProducerRequest producer);
+        public int AddProducer(ProducerRequest producer);
         public void UpdateProducer(int Id, ProducerRequest producer);
         public void DeleteProducer(int Id);
     }
