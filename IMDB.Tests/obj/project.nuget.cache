@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+LapOv3o8JZxKZriCfl24IvdbNOkuuRFzWJvrAFsaDYQ5arbCV5wmlbX4ufrFozGhA2VNjq92rcrvhCepAZtlQ==",
+  "dgSpecHash": "upJcgTmrvr33SNTI+/cjd96wPNQyOhPo8vutJ8UsWjGW+ng579TlMeHsiKGZPbasbKooN3wSM8FMOIYK6QPZ7g==",
   "success": true,
-  "projectFilePath": "/Users/ash/Desktop/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj",
+  "projectFilePath": "/Users/ash/Documents/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj",
   "expectedPackageFiles": [
     "/Users/ash/.nuget/packages/bodi/1.5.0/bodi.1.5.0.nupkg.sha512",
     "/Users/ash/.nuget/packages/castle.core/4.4.0/castle.core.4.4.0.nupkg.sha512",

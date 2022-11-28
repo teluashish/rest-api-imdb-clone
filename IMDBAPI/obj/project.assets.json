@@ -5456,11 +5456,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ash/Desktop/IMDBApplication/IMDBAPI/IMDBAPI.csproj",
+      "projectUniqueName": "/Users/ash/Documents/IMDBApplication/IMDBAPI/IMDBAPI.csproj",
       "projectName": "IMDBAPI",
-      "projectPath": "/Users/ash/Desktop/IMDBApplication/IMDBAPI/IMDBAPI.csproj",
+      "projectPath": "/Users/ash/Documents/IMDBApplication/IMDBAPI/IMDBAPI.csproj",
       "packagesPath": "/Users/ash/.nuget/packages/",
-      "outputPath": "/Users/ash/Desktop/IMDBApplication/IMDBAPI/obj/",
+      "outputPath": "/Users/ash/Documents/IMDBApplication/IMDBAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ash/.config/NuGet/NuGet.Config"

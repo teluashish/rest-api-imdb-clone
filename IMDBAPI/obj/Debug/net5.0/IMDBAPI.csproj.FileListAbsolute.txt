@@ -72,3 +72,4 @@
 /Users/ash/Desktop/IMDBApplication/IMDBAPI/obj/Debug/net5.0/ref/IMDBAPI.dll
 /Users/ash/Desktop/IMDBApplication/IMDBAPI/obj/Debug/net5.0/IMDBAPI.pdb
 /Users/ash/Desktop/IMDBApplication/IMDBAPI/obj/Debug/net5.0/IMDBAPI.genruntimeconfig.cache
+/Users/ash/Documents/IMDBApplication/IMDBAPI/bin/Debug/net5.0/mono_crash.11a6748113.0.json

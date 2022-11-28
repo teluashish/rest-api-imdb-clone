@@ -8908,11 +8908,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ash/Desktop/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj",
+      "projectUniqueName": "/Users/ash/Documents/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj",
       "projectName": "IMDB.Tests",
-      "projectPath": "/Users/ash/Desktop/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj",
+      "projectPath": "/Users/ash/Documents/IMDBApplication/IMDB.Tests/IMDB.Tests.csproj",
       "packagesPath": "/Users/ash/.nuget/packages/",
-      "outputPath": "/Users/ash/Desktop/IMDBApplication/IMDB.Tests/obj/",
+      "outputPath": "/Users/ash/Documents/IMDBApplication/IMDB.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ash/.config/NuGet/NuGet.Config"
@@ -8927,8 +8927,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/ash/Desktop/IMDBApplication/IMDBAPI/IMDBAPI.csproj": {
-              "projectPath": "/Users/ash/Desktop/IMDBApplication/IMDBAPI/IMDBAPI.csproj"
+            "/Users/ash/Documents/IMDBApplication/IMDBAPI/IMDBAPI.csproj": {
+              "projectPath": "/Users/ash/Documents/IMDBApplication/IMDBAPI/IMDBAPI.csproj"
             }
           }
         }

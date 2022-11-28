@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{A06D0283-4DE4-48C0-98EF-4B2C635D8627}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="IMDBAPI/Repositories/Implementation/BaseRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="IMDBAPI/appsettings.json">
     <Files>
       <File FileName="IMDB.Tests/ActorFeature.feature" Line="17" Column="1" />
       <File FileName="IMDB.Tests/BaseSteps.cs" />
       <File FileName="IMDBAPI/Services/Implementation/ActorService.cs" />
       <File FileName="IMDB.Tests/MockRepositories/ActorMock.cs" />
       <File FileName="IMDB.Tests/ActorSteps.cs" />
-      <File FileName="IMDBAPI/Repositories/Implementation/BaseRepository.cs" Line="36" Column="1" />
+      <File FileName="IMDBAPI/Repositories/Implementation/BaseRepository.cs" Line="24" Column="1" />
       <File FileName="IMDBAPI/Repositories/Implementation/ActorRepository.cs" />
       <File FileName="IMDBAPI/Controllers/ActorsController.cs" />
       <File FileName="IMDBAPI/Program.cs" />
@@ -31,6 +31,8 @@
       <File FileName="IMDBAPI/Repositories/Interfaces/IProducerRepository.cs" />
       <File FileName="IMDBAPI/Services/Implementation/ProducerService.cs" />
       <File FileName="IMDBAPI/Controllers/ProducersController.cs" />
+      <File FileName="IMDBAPI/ConnectionString.cs" Line="1" Column="1" />
+      <File FileName="IMDBAPI/appsettings.json" Line="11" Column="104" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -50,15 +52,14 @@
                 <Node name="Response" expanded="True" />
               </Node>
               <Node name="Repositories" expanded="True">
-                <Node name="Implementation" expanded="True">
-                  <Node name="BaseRepository.cs" selected="True" />
-                </Node>
+                <Node name="Implementation" expanded="True" />
                 <Node name="Interfaces" expanded="True" />
               </Node>
               <Node name="Services" expanded="True">
                 <Node name="Implementation" expanded="True" />
                 <Node name="Interfaces" expanded="True" />
               </Node>
+              <Node name="appsettings.json" selected="True" />
             </Node>
           </Node>
         </State>
